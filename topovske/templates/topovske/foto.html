@@ -1,0 +1,130 @@
+{% extends 'topovske/base_template.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+	<div class="galerija-container">
+		<div class="galerija-slajder">
+			<div class="foto_galerija">
+	            <div  class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <div class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div>
+	            <br style="clear: both;">
+			</div>
+	    </div>
+	    <div class="controls">
+			<div class="prev">
+				<img src="{% static 'topovske/images/blue_arrow_reverse.png' %}">
+			</div>
+			<div class="next">
+				<img src="{% static 'topovske/images/blue_arrow.png' %}">
+			</div>
+		</div>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+		$(document).ready(function(){
+			$('.magnifying-glass').hover(function(){
+			    $('.search-box-input').css('visibility', "visible");
+			});	
+		});
+
+    </script>
+     <script>
+		$(document).ready(function(){
+			$('nav').mouseleave(function() {
+			    $('.search-box-input').css('visibility', "hidden");
+			});	
+		});
+
+    </script>
+     <script>
+		$(document).ready(function(){
+			$('.magnifying-glass').hover(function() {
+			    $('.input-off').css('display', "block");
+			});	
+		});
+
+    </script>
+     <script>
+		$(document).ready(function(){
+			$('.input-off').click(function() {
+			    $('.search-box-input').css('display', "none");
+			});	
+		});
+    </script>
+     <script>
+		$(document).ready(function(){
+			$('.input-off').click(function() {
+			    $('.input-off').css('display', "none");
+			});	
+		});
+    </script>
+    <script>
+		$(document).ready(function(){
+			$('.menu-close-box').click(function() {
+			    $('.menu-dropdown').css('transform', "translateX(100%)");
+			});	
+		});
+    </script>
+
+    <script>
+		$(document).ready(function(){
+			$('.burger').click(function() {
+			    $('.menu-dropdown').css('transform', "translateX(0%)");
+			});	
+		});
+    </script>
+    <script>
+    	$('.container-projekti-mobile .Page_slide').slice(0,1).show();
+    	$('#load-more').on('click', function() {
+            $('.container-projekti-mobile .Page_slide:hidden').slice(0,1).slideDown();
+            if($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
+                $('#load-more').fadeOut();
+            }
+        });
+    </script>
+    <script>
+    	$('.galerija-slajder').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: true,
+			prevArrow: $('.prev'),
+			nextArrow: $('.next')
+    	});
+    </script>
+{% endblock content %}

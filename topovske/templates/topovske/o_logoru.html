@@ -1,0 +1,178 @@
+{% extends 'topovske/base_template.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+    <div class="o_logoru_container">
+    	<div class="inside-box1">
+			<div class="inner1">
+				<div class="i-left">
+					<img src="{% static 'topovske/images/blue_bar.png' %}">
+				</div>
+				<div class="i-right">
+				    ISTORIJA LOGORA
+				</div>
+			</div>
+			<div class="inner2">
+				<div class="i-left">
+					<img src="{% static 'topovske/images/blue_bar.png' %}">
+				</div>
+				<div class="i-right">
+				    POSTOJEĆE STANJE
+				</div>
+			</div>
+			<div class="inner3">
+				<div class="i-left">
+					<img src="{% static 'topovske/images/blue_bar.png' %}">
+				</div>
+				<div class="i-right">
+				    JAVNA KAMPANJA
+				</div>
+			</div>
+		</div>
+    	<div class="inside_box2_istorija" style="margin-bottom: 30px;">
+    		<div class="title">ISTORIJA LOGORA</div>
+    		<div class="text">U blizini centra Beograda između avgusta i novembra 1941. godine nalazio se logor za Jevreje i Rome poznat kao logor Topovske šupe. Prvi logoraši bili su muški Jevreji iz Banata, koje su sa njihovim porodicama lokalni Nemci (folksdojčeri) proterali iz te pokrajine u Beograd; nakon njih su internirani svi muški Jevreji iz Beograda, i na kraju muški Romi takođe iz Beograda. Svi, osim retkih slučajeva, ubijeni su u masovnim streljanjima u jesen 1941. godine na stratištima oko Beograda, najviše u Jabuci kod Pančeva. Po raspoloživim procenama, kroz njega je prošlo oko 5.000 Jevreja i 1.500 Roma. O Topovskim šupama se i danas jako malo zna. Lokacija logora Topovske šupe je zaboravljena, zapuštena i nepoznata široj javnosti. Postoji velika opasnost da zgrade koje su bile sastavni deo logora budu uništene zbog najavljene izgradnje tržnog centra. Nakon što je komemorativna ploča koju je postavio Savez jevrejskih opština Srbije 2018. godine ukradena, predstavnici Jevrejske opštine Beograd su, povodom obeležavanja Dana sećanja i hrabrosti – Jom Hašoa Veagevura, 2. maja 2019. godine, otkrili novu memorijalnu ploču.</div>
+    	</div>
+    	<div class="inside_box2_stanje" style="margin-bottom: 30px;">
+    		<div class="title">POSTOJEĆE STANJE</div>
+    		<div class="text">U blizini centra Beograda između avgusta i novembra 1941. godine nalazio se logor za Jevreje i Rome poznat kao logor Topovske šupe. Prvi logoraši bili su muški Jevreji iz Banata, koje su sa njihovim porodicama lokalni Nemci (folksdojčeri) proterali iz te pokrajine u Beograd; nakon njih su internirani svi muški Jevreji iz Beograda, i na kraju muški Romi takođe iz Beograda. Svi, osim retkih slučajeva, ubijeni su u masovnim streljanjima u jesen 1941. godine na stratištima oko Beograda, najviše u Jabuci kod Pančeva. Po raspoloživim procenama, kroz njega je prošlo oko 5.000 Jevreja i 1.500 Roma. O Topovskim šupama se i danas jako malo zna. Lokacija logora Topovske šupe je zaboravljena, zapuštena i nepoznata široj javnosti. Postoji velika opasnost da zgrade koje su bile sastavni deo logora budu uništene zbog najavljene izgradnje tržnog centra. Nakon što je komemorativna ploča koju je postavio Savez jevrejskih opština Srbije 2018. godine ukradena, predstavnici Jevrejske opštine Beograd su, povodom obeležavanja Dana sećanja i hrabrosti – Jom Hašoa Veagevura, 2. maja 2019. godine, otkrili novu memorijalnu ploču.</div>
+    	</div>
+    	<div class="inside_box2_kampanja" style="margin-bottom: 30px;">
+    		<div class="title">JAVNA KAMPANJA</div>
+    		<div class="text">U blizini centra Beograda između avgusta i novembra 1941. godine nalazio se logor za Jevreje i Rome poznat kao logor Topovske šupe. Prvi logoraši bili su muški Jevreji iz Banata, koje su sa njihovim porodicama lokalni Nemci (folksdojčeri) proterali iz te pokrajine u Beograd; nakon njih su internirani svi muški Jevreji iz Beograda, i na kraju muški Romi takođe iz Beograda. Svi, osim retkih slučajeva, ubijeni su u masovnim streljanjima u jesen 1941. godine na stratištima oko Beograda, najviše u Jabuci kod Pančeva. Po raspoloživim procenama, kroz njega je prošlo oko 5.000 Jevreja i 1.500 Roma. O Topovskim šupama se i danas jako malo zna. Lokacija logora Topovske šupe je zaboravljena, zapuštena i nepoznata široj javnosti. Postoji velika opasnost da zgrade koje su bile sastavni deo logora budu uništene zbog najavljene izgradnje tržnog centra. Nakon što je komemorativna ploča koju je postavio Savez jevrejskih opština Srbije 2018. godine ukradena, predstavnici Jevrejske opštine Beograd su, povodom obeležavanja Dana sećanja i hrabrosti – Jom Hašoa Veagevura, 2. maja 2019. godine, otkrili novu memorijalnu ploču.</div>
+    	</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+			$('.magnifying-glass').hover(function() {
+			    $('.search-box-input').css('visibility', "visible");
+			});	
+		});
+
+    </script>
+     <script>
+		$(document).ready(function(){
+			$('nav').mouseleave(function() {
+			    $('.search-box-input').css('visibility', "hidden");
+			});	
+		});
+
+    </script>
+     <script>
+		$(document).ready(function(){
+			$('.magnifying-glass').hover(function() {
+			    $('.input-off').css('display', "block");
+			});	
+		});
+
+    </script>
+     <script>
+		$(document).ready(function(){
+			$('.input-off').click(function() {
+			    $('.search-box-input').css('display', "none");
+			});	
+		});
+    </script>
+     <script>
+		$(document).ready(function(){
+			$('.input-off').click(function() {
+			    $('.input-off').css('display', "none");
+			});	
+		});
+    </script>
+    <script>
+		$(document).ready(function(){
+			$('.menu-close-box').click(function() {
+			    $('.menu-dropdown').css('transform', "translateX(100%)");
+			});	
+		});
+    </script>
+
+    <script>
+		$(document).ready(function(){
+			$('.burger').click(function() {
+			    $('.menu-dropdown').css('transform', "translateX(0%)");
+			});	
+		});
+    </script>
+    <script>
+    	$('.container-projekti-mobile .Page_slide').slice(0,1).show();
+    	$('#load-more').on('click', function() {
+            $('.container-projekti-mobile .Page_slide:hidden').slice(0,1).slideDown();
+            if($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
+                $('#load-more').fadeOut();
+            }
+        });
+    </script>
+    <script>
+		$(document).ready(function(){
+			$('.inner2 .i-right').click(function() {
+			    $('.inside_box2_istorija').css('display', "none");
+			});	
+			 $('.inner2 .i-right').click(function() {
+			    $('.o_logoru_container .inside_box2_kampanja').css('display', "none");
+			});	
+			$('.inner2 .i-right').click(function() {
+			    $('.o_logoru_container .inside_box2_stanje').css('display', 'block');
+			});
+			$('.inner2 .i-right').click(function() {
+			    $('.inner2 .i-right').css('color', '#324E6B');
+			}); 
+			$('.inner2 .i-right').click(function() {
+			    $('.inner2 .i-right').css('color', '#324E6B');
+			    $('.inner2 .i-left').css('visibility', 'visible');
+			    $('.inner1 .i-right').css('color', '#9BA7B1');
+			    $('.inner1 .i-left').css('visibility', 'hidden');
+			    $('.inner3 .i-right').css('color', '#9BA7B1');
+			    $('.inner3 .i-left').css('visibility', 'hidden');
+			});
+		}); 	
+    </script>   
+    <script>
+		$(document).ready(function(){
+			$('.inner1 .i-right').click(function() {
+			    $('.inside_box2_istorija').css('display', "block");
+			});	
+			 $('.inner1 .i-right').click(function() {
+			    $('.o_logoru_container .inside_box2_kampanja').css('display', "none");
+			});	
+			$('.inner1 .i-right').click(function() {
+			    $('.o_logoru_container .inside_box2_stanje').css('display', "none");
+			});
+			$('.inner1 .i-right').click(function() {
+			    $('.inner1 .i-right').css('color', '#324E6B');
+			});
+			$('.inner1 .i-right').click(function() {
+			    $('.inner1 .i-right').css('color', '#324E6B');
+			    $('.inner1 .i-left').css('visibility', 'visible');
+			    $('.inner3 .i-right').css('color', '#9BA7B1');
+			    $('.inner3 .i-left').css('visibility', 'hidden');
+			    $('.inner2 .i-right').css('color', '#9BA7B1');
+			    $('.inner2 .i-left').css('visibility', 'hidden');
+			});
+		});
+    </script>  
+    <script>
+		$(document).ready(function(){
+			$('.inner3 .i-right').click(function() {
+			    $('.inside_box2_istorija').css('display', "none");
+			});	
+			 $('.inner3 .i-right').click(function() {
+			    $('.o_logoru_container .inside_box2_stanje').css('display', "none");
+			});	
+			$('.inner3 .i-right').click(function() {
+			    $('.o_logoru_container .inside_box2_kampanja').css('display', "block");
+			});
+			$('.inner3 .i-right').click(function() {
+			    $('.inner3 .i-right').css('color', '#324E6B');
+			    $('.inner3 .i-left').css('visibility', 'visible');
+			    $('.inner1 .i-right').css('color', '#9BA7B1');
+			    $('.inner1 .i-left').css('visibility', 'hidden');
+			    $('.inner2 .i-right').css('color', '#9BA7B1');
+			    $('.inner2 .i-left').css('visibility', 'hidden');
+			});
+		});
+    </script>
+{% endblock content %}
+

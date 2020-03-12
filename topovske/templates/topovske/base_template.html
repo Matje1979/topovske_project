@@ -1,0 +1,212 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'topovske/css/stylesheet.css' %}">
+	<title>Topovske šupe</title>
+</head>
+<body>
+    <div class="menu-dropdown" style="background-color: #324E6B;">
+		<div class="menu-close-box"><img src="{% static 'topovske/images/X.png' %}"></div>
+		<p class="menu-title">MENI</p>
+		<ul class="menu-dropdown-list">
+			<li class="list-item"><a href="{% url 'topovske-projekat' %}">{% trans 'O PROJEKTU' %}</a></li>
+			<li class="list-item"><a href="{% url 'topovske-o-logoru' %}">{% trans 'O LOGORU' %}</a></li>
+			<li class="list-item" id="i-ture"><a href="{% url 'topovske-arhiva' %}">{% trans 'ARHIVA' %}</a></li>
+			<li class="list-item"><a href="{% url 'topovske-mapa' %}">{% trans 'MAPA' %}</a></li>
+			<li class="list-item" id="i-ture"><a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a></li>
+			<li class="list-item"><a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a></li>
+		</ul>
+		{% if 'en' not in request.path %}
+	        <ul class="nav-langs">
+	            <li class="light"><a href="{{ url }}">SRB</a></li>
+	            <li class="li-regular"><a href="/en{{ url }}">ENG</a></li>
+	        </ul>
+	    {% else %}
+	        <ul class="nav-langs_en">
+	            <li class="li-regular"><a href="{{ url }}">SRB</a></li>
+	            <li class="light"><a href="/en{{ url }}">ENG</a></li>  
+	        </ul>
+	    {% endif %}
+	</div>
+	{% if location == "naslovna" %}
+		<nav class="nav-index" style="width: 100%;">
+			<a href="{% url 'topovske-naslovna' %}">
+				<div class="logo-wrapper">
+			        <img src="{% static 'topovske/images/topovske_logo.png' %}" style="height: 66px;">
+		        </div>
+	        </a>
+		    <ul class="nav-links">
+		      <li class="o_nama" style="width: auto;">
+		        <a href="{% url 'topovske-projekat' %}">{% trans 'O PROJEKTU' %}</a>
+		        {% if 'projekat' in request.path %}
+		            <p class="onam1"></p>
+		        {% else %}
+		            <p class="onam2"></p>
+		        {% endif %}
+		      </li>
+		      <li class="nav-projekti" style="width: auto;">
+		        <a href="{% url 'topovske-o-logoru' %}">{% trans 'O LOGORU' %}</a>
+		        {% if 'o_logoru' in request.path %}
+		            <p class="pro1"></p>
+		        {% else %}
+		            <p class="pro2"></p>
+		        {% endif %}
+		      </li>
+		      <li class="h_tours" style="width: auto;">
+		        <a href="{% url 'topovske-arhiva' %}">{% trans 'ARHIVA' %}</a>
+		        {% if 'arhiva' in request.path %}
+		            <p class="ist1"></p>
+		        {% else %}
+		            <p class="ist2"></p>
+		        {% endif %}
+		      </li>
+		      <li class="publications" style="width: auto">
+		        <a href="{% url 'topovske-mapa' %}" >{% trans 'MAPA' %}</a>
+		        {% if 'mapa' in request.path %}
+		            <p class="pub1"></p>
+		        {% else %}
+		            <p class="pub2"></p>
+		        {% endif %}
+		      </li>
+		       <li class="o_nama" style="width:auto;">
+		        <a href="{% url 'topovske-baza-podataka' %}">{% trans 'BAZA PODATAKA' %}</a>
+		        {% if 'baza_podataka' in request.path %}
+		            <p class="onam1"></p>
+		        {% else %}
+		            <p class="onam2"></p>
+		        {% endif %}
+		      </li>  
+		      <li class="o_nama" style="width:auto;">
+		        <a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a>
+		        {% if 'foto' in request.path %}
+		            <p class="onam1"></p>
+		        {% else %}
+		            <p class="onam2"></p>
+		        {% endif %}	
+		      </li>
+		      <li class="o_nama" style="width:auto;">
+		        <a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a>
+		        {% if 'video' in request.path %}
+		            <p class="onam1"></p>
+		        {% else %}
+		            <p class="onam2"></p>
+		        {% endif %}
+		      </li>
+		      <li id="langs">
+		        <span id="langs-img"><img src="{% static 'topovske/images/vektor.png' %}"></span><span><a href="#">ENG</a></span><span><a href="#">SRB</a></span>
+		      </li>
+		    </ul>
+		    {% if 'en' not in request.path %}
+		        <div class="nav-langs" style="margin-left: 80px;">
+		            <div class="light"><a href="{{ url }}">SRB</a></div>
+		            <div class="li-regular"><a href="/en{{ url }}">ENG</a></div>
+		        </div>
+		    {% else %}
+		        <div class="nav-langs_en">
+		          <li class="li-regular"><a href="{{ url }}">SRB</a></li>
+		          <li class="light"><a href="/en{{ url }}">ENG</a></li>
+		        </div>
+		    {% endif %}
+		    <div class="burger" id="burger-alt" style="margin-top: 20px;">
+		      <div class="line1"></div>
+		      <div class="line2"></div>
+		      <div class="line3"></div>
+		    </div>
+	    </nav>
+	{% else %}
+		<nav style="width: 100%; background-color: #324E6B;">
+			<a href="{% url 'topovske-naslovna' %}">
+			<div class="logo-wrapper">
+		        <img src="{% static 'topovske/images/topovske_logo.png' %}" style="height: 66px;">
+	        </div>
+	        </a>
+		    <ul class="nav-links">
+		      <li class="o_nama" style="width: auto;">
+		        <a href="{% url 'topovske-projekat' %}">{% trans 'O PROJEKTU' %}</a>
+		        {% if 'projekat' in request.path %}
+		            <p class="onam1"></p>
+		        {% else %}
+		            <p class="onam2"></p>
+		        {% endif %}
+		      </li>
+		      <li class="nav-projekti" style="width: auto;">
+		        <a href="{% url 'topovske-o-logoru' %}">{% trans 'O LOGORU' %}</a>
+		        {% if 'o_logoru' in request.path %}
+		            <p class="pro1"></p>
+		        {% else %}
+		            <p class="pro2"></p>
+		        {% endif %}
+		      </li>
+		      <li class="h_tours" style="width: auto;">
+		        <a href="{% url 'topovske-arhiva' %}">{% trans 'ARHIVA' %}</a>
+		        {% if 'arhiva' in request.path %}
+		            <p class="ist1"></p>
+		        {% else %}
+		            <p class="ist2"></p>
+		        {% endif %}
+		      </li>
+		      <li class="publications" style="width: auto">
+		        <a href="{% url 'topovske-mapa' %}">{% trans 'MAPA' %}</a>
+		        {% if 'mapa' in request.path %}
+		            <p class="pub1"></p>
+		        {% else %}
+		            <p class="pub2"></p>
+		        {% endif %}
+		      </li>
+		       <li class="o_nama" style="width:auto;">
+		        <a href="{% url 'topovske-baza-podataka' %}">{% trans 'BAZA PODATAKA' %}</a>
+		        {% if 'baza_podataka' in request.path %}
+		            <p class="onam1"></p>
+		        {% else %}
+		            <p class="onam2"></p>
+		        {% endif %}
+		      </li>  
+		      <li class="o_nama" style="width:auto;">
+		        <a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a>
+		        {% if 'foto' in request.path %}
+		            <p class="onam1"></p>
+		        {% else %}
+		            <p class="onam2"></p>
+		        {% endif %}
+		      </li>
+		      <li class="o_nama" style="width:auto;">
+		        <a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a>
+		        {% if 'video' in request.path %}
+		            <p class="onam1"></p>
+		        {% else %}
+		            <p class="onam2"></p>
+		        {% endif %}
+		      </li>
+		      <li id="langs">
+		        <span id="langs-img"><img src="{% static 'topovske/images/vektor.png' %}"></span><span><a href="#">ENG</a></span><span><a href="#">SRB</a></span>
+		      </li>
+		    </ul>
+		    {% if 'en' not in request.path %}
+		        <div class="nav-langs" style="margin-left: 80px;">
+		            <div class="light"><a href="{{ url }}">SRB</a></div>
+		            <div class="li-regular"><a href="/en{{ url }}">ENG</a></div>
+		        </div>
+		    {% else %}
+		        <div class="nav-langs_en">
+		          <li class="li-regular"><a href="{{ url }}">SRB</a></li>
+		          <li class="light"><a href="/en{{ url }}">ENG</a></li>
+		        </div>
+		    {% endif %}
+		    <div class="burger" style="margin-top: 20px;">
+		      <div class="line1"></div>
+		      <div class="line2"></div>
+		      <div class="line3"></div>
+		    </div>
+	    </nav>
+	{% endif %}
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
