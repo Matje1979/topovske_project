@@ -1,5 +1,9 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls import include, url, re_path
+from . import views
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -13,3 +17,9 @@ urlpatterns = [
     path('video/', views.video, name="topovske-video"),
 ]
 
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]

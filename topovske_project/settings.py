@@ -35,12 +35,14 @@ INTERNAL_IPS = ['127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
     'topovske.apps.TopovskeConfig',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'ckeditor',
 ]
 
@@ -53,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware'
 ]
 
 ROOT_URLCONF = 'topovske_project.urls'
@@ -112,6 +115,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
+
+gettext = lambda s: s
+
+LANGUAGES = (
+    ('sr', gettext('Serbian')),
+    ('en', gettext('English')),
+)
 
 LANGUAGE_CODE = 'sr-latn'
 

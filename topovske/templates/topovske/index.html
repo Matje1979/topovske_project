@@ -2,6 +2,7 @@
 {% load static %}
 {% load i18n %}
 {% block content %}
+
     <div class="index-bg-photos">
 	    <img class="index-photo1" src="{% static 'topovske/images/topovske-img.png' %}">
 	    <img class="index-photo2" src="#">
@@ -30,15 +31,15 @@
 	</div>
 	<div class="index-project-title">Topovske šupe</div>
 	<div class="index-project-subtitle">Mapiranje Holokausta - Logor Topovkse šupe</div>
-	<div class="index-project-number1">1.</div>
-	<div class="index-project-number2">2.</div>
-	<div class="index-project-number3">3.</div>
-	<div class="index-project-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.
+{#	<div class="index-project-number1">1.</div>#}
+{#	<div class="index-project-number2">2.</div>#}
+{#	<div class="index-project-number3">3.</div>#}
+    {% for idx_item in indexes %}
+    <div class="index-project-number{{ forloop.counter }}">{{ idx_item.title_en | safe }}</div>
+	<div class="index-project-text1">{{ idx_item.text_en | safe }}
 	</div>
-	<div class="index-project-text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-	</div>
-	<div class="index-project-text3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa. 
-	</div>
+    {% endfor %}
+
 	<a href="https://www.facebook.com/cpi.cpi.90226/about?section=contact-info&lst=586286136%3A100026784489324%3A1583921432">
 	    <img id="fb-img" src="{% static 'topovske/images/fb-img.png' %}">
     </a>
@@ -51,6 +52,7 @@
     <a href="http://test.cpi.rs">
 	    <div id="pratite_nas">PRATITE NAS</div>
 	</a>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script>
@@ -58,65 +60,31 @@
 			$('.magnifying-glass').hover(function() {
 			    $('.search-box-input').css('visibility', "visible");
 			});	
-		});
 
-    </script>
-     <script>
-		$(document).ready(function(){
 			$('nav').mouseleave(function() {
 			    $('.search-box-input').css('visibility', "hidden");
 			});	
-		});
 
-    </script>
-     <script>
-		$(document).ready(function(){
 			$('.magnifying-glass').hover(function() {
 			    $('.input-off').css('display', "block");
 			});	
-		});
 
-    </script>
-     <script>
-		$(document).ready(function(){
 			$('.input-off').click(function() {
 			    $('.search-box-input').css('display', "none");
 			});	
-		});
-    </script>
-     <script>
-		$(document).ready(function(){
+
 			$('.input-off').click(function() {
 			    $('.input-off').css('display', "none");
 			});	
-		});
-    </script>
-    <script>
-		$(document).ready(function(){
+
 			$('.menu-close-box').click(function() {
 			    $('.menu-dropdown').css('transform', "translateX(100%)");
 			});	
-		});
-    </script>
 
-    <script>
-		$(document).ready(function(){
 			$('.burger').click(function() {
 			    $('.menu-dropdown').css('transform', "translateX(0%)");
-			});	
-		});
-    </script>
-    <script>
-    	$('.container-projekti-mobile .Page_slide').slice(0,1).show();
-    	$('#load-more').on('click', function() {
-            $('.container-projekti-mobile .Page_slide:hidden').slice(0,1).slideDown();
-            if($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
-                $('#load-more').fadeOut();
-            }
-        });
-    </script>
-    <script>
-		$(document).ready(function(){
+			});
+
 			$('.c-right1').click(function() {
 				$('.c-right1').css('display', "none");
 				$('.c-right2').css('display', "flex");
@@ -126,15 +94,22 @@
 			    $('.index-photo1').css('display', "none");
 			    $('.index-photo2').css('display', "block");
 			    $('.index-photo3').css('display', "none");
-			    $('.index-project-number1').css('display', "none");   
-			    $('.index-project-number2').css('display', "block");   
-			    $('.index-project-number3').css('display', "none");   
-			    $('.index-project-text1').css('display', "none");   
-			    $('.index-project-text2').css('display', "block");   
-			    $('.index-project-text3').css('display', "none");   
-			});	
-		});
-		$(document).ready(function(){
+			    $('.index-project-number1').css('display', "none");
+			    $('.index-project-number2').css('display', "block");
+			    $('.index-project-number3').css('display', "none");
+			    $('.index-project-text1').css('display', "none");
+			    $('.index-project-text2').css('display', "block");
+			    $('.index-project-text3').css('display', "none");
+			});
+
+            $('.container-projekti-mobile .Page_slide').slice(0,1).show();
+            $('#load-more').on('click', function() {
+                $('.container-projekti-mobile .Page_slide:hidden').slice(0, 1).slideDown();
+                if ($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
+                    $('#load-more').fadeOut();
+                }
+            });
+
 			$('.c-right2').click(function() {
 				$('.c-right2').css('display', "none");
 				$('.c-right1').css('display', "none");
@@ -152,8 +127,7 @@
 			    $('.index-project-text2').css('display', "none");   
 			    $('.index-project-text3').css('display', "block");      
 			});	
-		});
-		$(document).ready(function(){
+
 			$('.c-left3').click(function() {
 				$('.c-left3').css('display', "none");
 				$('.c-left2').css('display', "flex");
@@ -171,8 +145,7 @@
 			    $('.index-project-text2').css('display', "block");   
 			    $('.index-project-text3').css('display', "none");   
 			});	
-		});
-		$(document).ready(function(){
+
 			$('.c-left2').click(function() {
 				$('.c-left3').css('display', "none");
 				$('.c-left2').css('display', "none");
