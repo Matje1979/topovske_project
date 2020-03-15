@@ -35,8 +35,8 @@
 {#	<div class="index-project-number2">2.</div>#}
 {#	<div class="index-project-number3">3.</div>#}
     {% for idx_item in indexes %}
-    <div class="index-project-number{{ forloop.counter }}">{{ idx_item.title_en | safe }}</div>
-	<div class="index-project-text1">{{ idx_item.text_en | safe }}
+    <div class="index-project-number{{ forloop.counter }}">{{ idx_item.title | safe }}</div>
+	<div class="index-project-text1">{{ idx_item.text | safe }}
 	</div>
     {% endfor %}
 
