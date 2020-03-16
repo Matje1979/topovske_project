@@ -15,6 +15,7 @@ urlpatterns = [
     path('baza_podataka/', views.dbase, name="topovske-baza-podataka"),
     path('foto/', views.foto, name="topovske-foto"),
     path('video/', views.video, name="topovske-video"),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
 
 if settings.DEBUG:

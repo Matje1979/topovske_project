@@ -24,17 +24,6 @@
 			<li class="list-item" id="i-ture"><a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a></li>
 			<li class="list-item"><a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a></li>
 		</ul>
-		{% if 'en' not in request.path %}
-	        <ul class="nav-langs">
-	            <li class="light"><a href="{{ url }}">SRB</a></li>
-	            <li class="li-regular"><a href="/en{{ url }}">ENG</a></li>
-	        </ul>
-	    {% else %}
-	        <ul class="nav-langs_en">
-	            <li class="li-regular"><a href="{{ url }}">SRB</a></li>
-	            <li class="light"><a href="/en{{ url }}">ENG</a></li>
-	        </ul>
-	    {% endif %}
 	</div>
 	{% if location == "naslovna" %}
 		<nav class="nav-index" style="width: 100%;">
@@ -106,12 +95,12 @@
 		    </ul>
 		    {% if 'en' not in request.path %}
 		        <div class="nav-langs" style="margin-left: 80px;">
-		            <div class="light"><a href="{{ url }}">SRB</a></div>
+		            <div class="light"><a href="/sr{{ url }}">SRB</a></div>
 		            <div class="li-regular"><a href="/en{{ url }}">ENG</a></div>
 		        </div>
 		    {% else %}
 		        <div class="nav-langs_en">
-		          <li class="li-regular"><a href="{{ url }}">SRB</a></li>
+		          <li class="li-regular"><a href="/sr{{ url }}">SRB</a></li>
 		          <li class="light"><a href="/en{{ url }}">ENG</a></li>
 		        </div>
 		    {% endif %}
