@@ -1,5 +1,7 @@
 {% load i18n %}
+{% load staticfiles %}
 {% load static %}
+
 
 <!DOCTYPE html>
 <html>
@@ -72,14 +74,14 @@
 		        {% else %}
 		            <p class="onam2"></p>
 		        {% endif %}
-		      </li>  
+		      </li>
 		      <li class="o_nama" style="width:auto;">
 		        <a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a>
 		        {% if 'foto' in request.path %}
 		            <p class="onam1"></p>
 		        {% else %}
 		            <p class="onam2"></p>
-		        {% endif %}	
+		        {% endif %}
 		      </li>
 		      <li class="o_nama" style="width:auto;">
 		        <a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a>
@@ -157,7 +159,7 @@
 		        {% else %}
 		            <p class="onam2"></p>
 		        {% endif %}
-		      </li>  
+		      </li>
 		      <li class="o_nama" style="width:auto;">
 		        <a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a>
 		        {% if 'foto' in request.path %}

@@ -1,8 +1,7 @@
 {% extends 'topovske/base_template.html' %}
 {% load static %}
-{% load i18n %}
-{% block content %}
 
+{% block content %}
     <div class="index-bg-photos">
 	    <img class="index-photo1" src="{% static 'topovske/images/topovske-img.png' %}">
 	    <img class="index-photo2" src="#">
@@ -31,12 +30,11 @@
 	</div>
 	<div class="index-project-title">Topovske šupe</div>
 	<div class="index-project-subtitle">Mapiranje Holokausta - Logor Topovkse šupe</div>
-{#	<div class="index-project-number1">1.</div>#}
-{#	<div class="index-project-number2">2.</div>#}
-{#	<div class="index-project-number3">3.</div>#}
     {% for idx_item in indexes %}
     <div class="index-project-number{{ forloop.counter }}">{{ idx_item.title | safe }}</div>
-	<div class="index-project-text1">{{ idx_item.text | safe }}
+    {% endfor %}
+    {% for idx_item in indexes %}
+	<div class="index-project-text{{ forloop.counter }}">{{ idx_item.text | safe }}
 	</div>
     {% endfor %}
 
@@ -53,116 +51,84 @@
 	    <div id="pratite_nas">PRATITE NAS</div>
 	</a>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$('.magnifying-glass').hover(function() {
-			    $('.search-box-input').css('visibility', "visible");
-			});	
+    <script>
+        $('.c-right1').click(function() {
+            $('.c-right1').css('display', "none");
+            $('.c-right2').css('display', "flex");
+            $('.c-left1').css('display', "none");
+            $('.c-left3').css('display', "none");
+            $('.c-left2').css('display', "flex");
+            $('.index-photo1').css('display', "none");
+            $('.index-photo2').css('display', "block");
+            $('.index-photo3').css('display', "none");
+            $('.index-project-number1').css('display', "none");
+            $('.index-project-number2').css('display', "block");
+            $('.index-project-number3').css('display', "none");
+            $('.index-project-text1').css('display', "none");
+            $('.index-project-text2').css('display', "block");
+            $('.index-project-text3').css('display', "none");
+        });
 
-			$('nav').mouseleave(function() {
-			    $('.search-box-input').css('visibility', "hidden");
-			});	
+        $('.container-projekti-mobile .Page_slide').slice(0,1).show();
+        $('#load-more').on('click', function() {
+            $('.container-projekti-mobile .Page_slide:hidden').slice(0, 1).slideDown();
+            if ($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
+                $('#load-more').fadeOut();
+            }
+        });
 
-			$('.magnifying-glass').hover(function() {
-			    $('.input-off').css('display', "block");
-			});	
+        $('.c-right2').click(function() {
+            $('.c-right2').css('display', "none");
+            $('.c-right1').css('display', "none");
+            $('.c-right3').css('display', "flex");
+            $('.c-left3').css('display', "flex");
+            $('.c-left2').css('display', "none");
+            $('.c-left1').css('display', "none");
+            $('.index-photo2').css('display', "none");
+            $('.index-photo3').css('display', "block");
+            $('.index-photo1').css('display', "none");
+            $('.index-project-number1').css('display', "none");
+            $('.index-project-number2').css('display', "none");
+            $('.index-project-number3').css('display', "block");
+            $('.index-project-text1').css('display', "none");
+            $('.index-project-text2').css('display', "none");
+            $('.index-project-text3').css('display', "block");
+        });
 
-			$('.input-off').click(function() {
-			    $('.search-box-input').css('display', "none");
-			});	
+        $('.c-left3').click(function() {
+            $('.c-left3').css('display', "none");
+            $('.c-left2').css('display', "flex");
+            $('.c-left1').css('display', "none");
+            $('.c-right1').css('display', "none");
+            $('.c-right2').css('display', "flex");
+            $('.c-right3').css('display', "none");
+            $('.index-photo1').css('display', "none");
+            $('.index-photo2').css('display', "block");
+            $('.index-photo3').css('display', "none");
+            $('.index-project-number1').css('display', "none");
+            $('.index-project-number2').css('display', "block");
+            $('.index-project-number3').css('display', "none");
+            $('.index-project-text1').css('display', "none");
+            $('.index-project-text2').css('display', "block");
+            $('.index-project-text3').css('display', "none");
+        });
 
-			$('.input-off').click(function() {
-			    $('.input-off').css('display', "none");
-			});	
-
-			$('.menu-close-box').click(function() {
-			    $('.menu-dropdown').css('transform', "translateX(100%)");
-			});	
-
-			$('.burger').click(function() {
-			    $('.menu-dropdown').css('transform', "translateX(0%)");
-			});
-
-			$('.c-right1').click(function() {
-				$('.c-right1').css('display', "none");
-				$('.c-right2').css('display', "flex");
-				$('.c-left1').css('display', "none");
-				$('.c-left3').css('display', "none");
-				$('.c-left2').css('display', "flex");
-			    $('.index-photo1').css('display', "none");
-			    $('.index-photo2').css('display', "block");
-			    $('.index-photo3').css('display', "none");
-			    $('.index-project-number1').css('display', "none");
-			    $('.index-project-number2').css('display', "block");
-			    $('.index-project-number3').css('display', "none");
-			    $('.index-project-text1').css('display', "none");
-			    $('.index-project-text2').css('display', "block");
-			    $('.index-project-text3').css('display', "none");
-			});
-
-            $('.container-projekti-mobile .Page_slide').slice(0,1).show();
-            $('#load-more').on('click', function() {
-                $('.container-projekti-mobile .Page_slide:hidden').slice(0, 1).slideDown();
-                if ($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
-                    $('#load-more').fadeOut();
-                }
-            });
-
-			$('.c-right2').click(function() {
-				$('.c-right2').css('display', "none");
-				$('.c-right1').css('display', "none");
-				$('.c-right3').css('display', "flex");
-				$('.c-left3').css('display', "flex");
-				$('.c-left2').css('display', "none");
-				$('.c-left1').css('display', "none");
-			    $('.index-photo2').css('display', "none");
-			    $('.index-photo3').css('display', "block");
-			    $('.index-photo1').css('display', "none");
-			    $('.index-project-number1').css('display', "none");   
-			    $('.index-project-number2').css('display', "none");   
-			    $('.index-project-number3').css('display', "block");   
-			    $('.index-project-text1').css('display', "none");   
-			    $('.index-project-text2').css('display', "none");   
-			    $('.index-project-text3').css('display', "block");      
-			});	
-
-			$('.c-left3').click(function() {
-				$('.c-left3').css('display', "none");
-				$('.c-left2').css('display', "flex");
-				$('.c-left1').css('display', "none");
-				$('.c-right1').css('display', "none");
-				$('.c-right2').css('display', "flex");
-				$('.c-right3').css('display', "none");
-			    $('.index-photo1').css('display', "none");
-			    $('.index-photo2').css('display', "block");
-			    $('.index-photo3').css('display', "none");
-			    $('.index-project-number1').css('display', "none");   
-			    $('.index-project-number2').css('display', "block");   
-			    $('.index-project-number3').css('display', "none");   
-			    $('.index-project-text1').css('display', "none");   
-			    $('.index-project-text2').css('display', "block");   
-			    $('.index-project-text3').css('display', "none");   
-			});	
-
-			$('.c-left2').click(function() {
-				$('.c-left3').css('display', "none");
-				$('.c-left2').css('display', "none");
-				$('.c-left1').css('display', "flex");
-				$('.c-right1').css('display', "flex");
-				$('.c-right2').css('display', "none");
-				$('.c-right3').css('display', "none");
-			    $('.index-photo1').css('display', "block");
-			    $('.index-photo2').css('display', "none");
-			    $('.index-photo3').css('display', "none");
-			    $('.index-project-number1').css('display', "block");   
-			    $('.index-project-number2').css('display', "none");   
-			    $('.index-project-number3').css('display', "none");   
-			    $('.index-project-text1').css('display', "block");   
-			    $('.index-project-text2').css('display', "none");   
-			    $('.index-project-text3').css('display', "none");     
-			});	
-		});
+        $('.c-left2').click(function() {
+            $('.c-left3').css('display', "none");
+            $('.c-left2').css('display', "none");
+            $('.c-left1').css('display', "flex");
+            $('.c-right1').css('display', "flex");
+            $('.c-right2').css('display', "none");
+            $('.c-right3').css('display', "none");
+            $('.index-photo1').css('display', "block");
+            $('.index-photo2').css('display', "none");
+            $('.index-photo3').css('display', "none");
+            $('.index-project-number1').css('display', "block");
+            $('.index-project-number2').css('display', "none");
+            $('.index-project-number3').css('display', "none");
+            $('.index-project-text1').css('display', "block");
+            $('.index-project-text2').css('display', "none");
+            $('.index-project-text3').css('display', "none");
+        });
     </script>
 {% endblock content %}

@@ -41,9 +41,9 @@ html, body{
 	color: #FFFFFF;
 }*/
 
-.menu-close-box{ 
+.menu-close-box{
     margin-top: 27px;
-    margin-right: 8.33%;  
+    margin-right: 8.33%;
     width: 36px;
 	height: 36px;
 	border: 1px solid white;
@@ -303,7 +303,7 @@ nav {
 	float: left;
 	color: #FFFFFF;
 	font-size: 2vmin;
-}	
+}
 .logo .tacka_2{
 	padding-right: 6px;
 }
@@ -399,7 +399,7 @@ nav {
 
 a {
 	text-decoration: none;
-	color: #FFFFFF; 
+	color: #FFFFFF;
 }
 
 .nav-links .o_nama p{
@@ -784,7 +784,7 @@ a {
 	float: left;
 	color: #FFFFFF;
 	font-size: 2vmin;
-}	
+}
 .logo .tacka_2{
 	padding-right: 6px;
 }
@@ -870,7 +870,7 @@ a {
 }
 .nav-index .nav-links .projekti a {
 	text-decoration: none;
-	color: #324E6B; 
+	color: #324E6B;
 }
 .nav-index a{
 	color: #324E6B;
@@ -1293,7 +1293,7 @@ a {
 	font-weight: 800;
 	color: #FFFFFF;
 	font-size: 4.86vw;
-	z-index: 3;	
+	z-index: 3;
 	width: 90%;
 	text-align: right;
 	line-height: 135%;
@@ -1321,9 +1321,9 @@ a {
 	font-size: 1.2vw;
 	color: #FFFFFF;
 }
-.desni_gornji{ 
+.desni_gornji{
     margin-top: 10.76vw;
-    height: 18.95vw; 
+    height: 18.95vw;
     display: flex;
     align-items: center;
 }
@@ -1423,7 +1423,7 @@ a {
 	height: 35.21%;
 	right: 11.11%;
 	bottom: 5.91%;
-	
+
 }
 .first-div-mobile .div-title{
 	top: 0px;
@@ -1533,7 +1533,7 @@ a {
     float: left;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 0px;
-} 
+}
 
 .a_upper .a_upper_right .title{
 	width: 68.54%;
@@ -1548,7 +1548,7 @@ a {
 	font-weight: 800;
 	font-size: 36px;
 	line-height: 40px;
-	letter-spacing: 0.07em;		
+	letter-spacing: 0.07em;
 }
 
 .a_upper .a_upper_right .description{
@@ -1650,7 +1650,7 @@ a {
 	box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.2);
 	background-color: #E84F45;
 }
-.lower_slide:hover .title{ 
+.lower_slide:hover .title{
     width: 270px;
     height: 200px;
     margin-left: 45px;
@@ -1764,7 +1764,7 @@ a {
 	display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 .a_lower .social .fb img{
@@ -1951,7 +1951,7 @@ a {
 .content-mobile .a-main .main-image{
 	width: 100%;
 
-	
+
 }
 
 .content-mobile .a-main .main-image img{
@@ -2208,7 +2208,7 @@ a {
 	margin-right: 50px;
 	background-color: #E84F45;
 	box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.2);
-} 
+}
 .projects .projects_slider .project-slide-wrapper .projects_slide:hover .project_num{
 	width:35px;
 	height: 25px;
@@ -2404,7 +2404,7 @@ li.slick-active button {
 	width:100%;
 }
 .gallery_inner{
-	
+
 	--screenWidth: 100%;
 	--leftMarginWidth: calc(calc(var(--screenWidth) - 1100px) / 2);
 	margin-left: var(--leftMarginWidth);
@@ -2415,7 +2415,7 @@ li.slick-active button {
 	margin-top: 0%;
 	margin-bottom: 0%;
 	/*border:1px solid blue;*/
-	
+
 }
 
 .gallery_inner .left{
@@ -2595,7 +2595,7 @@ li.slick-active button {
     width: 402px;
     margin-bottom: 32px;
     position: relative;
-   
+
 }
 
 .gallery-mobile .gallery-imgs .imgs-slide{
@@ -2707,7 +2707,7 @@ li.slick-active button {
 	width: 200px;
 	height: 10px;
 	background-color: #E84F45;
-}	
+}
 
 .video .video_gallery{
 	height: 461px;
@@ -2774,7 +2774,7 @@ li.slick-active button {
 	height: 230px;
 	background-color: gray;
 }
-    
+
 .video .page_link{
     width: 260px;
     height: 60px;
@@ -2871,7 +2871,7 @@ li.slick-active button {
 	width: 200px;
 	height: 10px;
 	background-color: #E84F45;
-}	
+}
 
 .publications_section .publications_content{
 	height: 841px;
@@ -2924,13 +2924,13 @@ li.slick-active button {
 
 .publications_section .publications_content .publications_slider .p-slide-wrapper .publications_slide:hover .p-slide-upper {
 	border: 16px solid white;
-} 
+}
 .publications_section .publications_content .publications_slider .p-slide-wrapper .publications_slide .p-slide-lower{
 	display: none;
 	width: 342px;
 	height: 304px;
 	background-color: #FFFFFF;
-}   
+}
 
 .publications_section .publications_content .publications_slider .p-slide-wrapper .publications_slide:hover .p-slide-lower{
     display: block;
@@ -3081,7 +3081,7 @@ li.slick-active button {
 
 
 /*------------------------------------ AKTUELNOSTI------------------------------------------*/
-	
+
 .aktuelnosti-page-slider{
 	position: relative;
     width: 1033.98px;
@@ -3089,7 +3089,7 @@ li.slick-active button {
     max-height: 2238.72px;
    /* border: 1px solid red;*/
     margin-bottom: 150px;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
     margin-top: 113px;
     overflow: hidden;
@@ -3110,7 +3110,7 @@ li.slick-active button {
     max-height: 2238.72px;
    /* border: 1px solid red;*/
     margin-bottom: 142.29px;
-    /*margin-left: auto; 
+    /*margin-left: auto;
     margin-right: auto;
     margin-top: 113px;*/
 
@@ -3181,7 +3181,7 @@ li.slick-active button {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 0px;
     border-bottom: 3px solid #E84F45;
-} 
+}
 
 .a-upper .a_upper_right .title{
 	width: 68.54%;
@@ -3196,7 +3196,7 @@ li.slick-active button {
 	font-weight: 800;
 	font-size: 36px;
 	line-height: 40px;
-	letter-spacing: 0.07em;		
+	letter-spacing: 0.07em;
 }
 
 .a-upper .a_upper_right .description{
@@ -3310,7 +3310,7 @@ li.slick-active button {
 .aktuelnost-normal .normal-right .normal-description{
 	width: 84.61%;
 	height: 29.44%;
-	margin-bottom: 5.83%; 
+	margin-bottom: 5.83%;
 	margin-left: 8.75%;
 	font-family: Roboto;
 	font-style: normal;
@@ -3361,7 +3361,7 @@ li.slick-active button {
 	width: 35.56%;
 	bottom: 10.83%;
 	left: 57.18%;
-} 
+}
 
 .aktuelnost-normal .normal-right .normal-link .normal-link-left{
 	width: 73.92%;
@@ -3397,7 +3397,7 @@ li.slick-active button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-} 
+}
 
 .aktuelnost-normal .normal-right .normal-link .normal-link-right-hover{
 	height: 100%;
@@ -3408,7 +3408,7 @@ li.slick-active button {
 	display: none;
 	justify-content: center;
 	align-items: center;
-} 
+}
 
 .aktuelnost-normal:hover .normal-right{
 	background-color: #E84F45;
@@ -3455,7 +3455,7 @@ li.slick-active button {
 }
 
 
-/*meni tj. 'menu' u 'o nama' sekciji. 
+/*meni tj. 'menu' u 'o nama' sekciji.
 Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo na odgovarajucoj strani*/
 
 .container .o_nama_meni{
@@ -3468,7 +3468,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 	margin-bottom: 90px;
 	margin-left: auto;
 	margin-right: auto;
-}	
+}
 
 .container .o_nama_meni .menu-item{
 	font-family: Gilroy;
@@ -3663,7 +3663,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 
 .container .tim_svi{
 	width: 790px;
-	min-height:300px;	
+	min-height:300px;
 	margin: 0 auto;
 	border:1px dotted 0.5px;
 	padding-bottom: 50px;
@@ -3676,7 +3676,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 /*.container .tim_svi .member-box{
-	
+
 	min-height: 250px;
 }*/
 .container .tim_svi .member-box .clan_tima {
@@ -4033,7 +4033,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 
 /*.foto_galerija{
 	position: relative;
-	width: 75%; 
+	width: 75%;
 	height: auto;
 	margin-top: 100px;
 	margin-left: auto;
@@ -4964,7 +4964,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 	height: 330px;
 	position: relative;
 	margin-bottom: 27px;
-	
+
 	/*background-color: gray;*/
 }
 
@@ -5001,7 +5001,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
     width: 100%;
 	height: 250px;
 	background-color: #E84F45;
-	 
+
 }
 
 .container-projekti-mobile .Page_slide .project-box .inner-box .lower-box{
@@ -5101,7 +5101,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .container-projekti-mobile .Page_slide .project-box .inner-box:hover .name-box{
-	
+
 	max-height: 96px;
 	margin-top: 23.89%;
 	width: 230px;
@@ -5229,7 +5229,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 	margin-right: auto;
 	margin-top: 20px;
 
-	
+
 }
 
 .projekat-detalji-mobile .projekat_Ime{
@@ -5277,7 +5277,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
     position: relative;
 	width: 100%;
 	height: 100%;
-	/*border:1px solid red;*/	
+	/*border:1px solid red;*/
 /*	margin-top: 4.51vw;
 	margin-bottom: 4.51vw;
 	margin-left: auto;
@@ -5466,7 +5466,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 	margin-bottom: 27.5px;
 	font-family: Roboto;
 	font-style: normal;
-	font-weight: normal;	
+	font-weight: normal;
 	font-size: 16px;
 	line-height: 144%;
 	letter-spacing: 0.05em;
@@ -5618,7 +5618,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
     width: 100%;
 	height: 99%;
 }
-   
+
 
 .Publications_page_slider .Page_slide .publikacija-box .publikacija .upper-part .right_margin{
 	width: 15.17px;
@@ -5667,7 +5667,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 
 .Publications_page_slider .Page_slide .publikacija-box .publikacija:hover .lower-part{
 	display: block;
-} 
+}
 
 .Publications_page_slider .Page_slide .publikacija-box .publikacija .lower-part .autor{
 	width: 48.24%;
@@ -5858,7 +5858,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 
 .Publications-container-mobile .publikacija-box .publikacija:hover .lower-part{
 	display: block;
-} 
+}
 
 .Publications-container-mobile .publikacija-box .publikacija .lower-part .autor{
 	width: 48.24%;
@@ -6119,31 +6119,31 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box{
-    display: flex; 
-    justify-content: space-around; 
-    position:relative; 
+    display: flex;
+    justify-content: space-around;
+    position:relative;
     bottom: 10px;
 }
 
 .footer .footer-content .content-box .inside-box1{
-	width: fit-content; 
-	height:300px; 
+	width: fit-content;
+	height:300px;
 	margin-left: 9vw;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner1{
-	width: 194.5px; 
-	height: 25px; 
-	margin-bottom: 30px; 
+	width: 194.5px;
+	height: 25px;
+	margin-bottom: 30px;
 	margin-top: 10px;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner1 .i-left{
-	width:61.5px; 
-	height: 25px; 
-	vertical-align: center; 
+	width:61.5px;
+	height: 25px;
+	vertical-align: center;
 	float: left;
-	display: none;	
+	display: none;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner1 .i-right{
@@ -6158,11 +6158,11 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box .inside-box1 .inner1 .i-right p{
-	font-size: 1.171vw; 
-	font-family: Gilroy; 
-	font-style: normal; 
-	font-weight: 800; 
-	color: #C4C4C4; 
+	font-size: 1.171vw;
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	color: #C4C4C4;
 	letter-spacing: 0.03em;
 }
 
@@ -6179,36 +6179,36 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box .inside-box1 .inner2{
-    width: 194.5px; 
-    height: 25px; 
+    width: 194.5px;
+    height: 25px;
     margin-bottom: 30px;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner2 .i-left{
-	width:61.5px; 
-	height: 25px; 
-	vertical-align: center; 
+	width:61.5px;
+	height: 25px;
+	vertical-align: center;
 	float: left;
 	display: none;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner2 .i-left img{
-	width: 33px; 
+	width: 33px;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner2 .i-right{
-	width: 160px; 
-	height: 25px; 
+	width: 160px;
+	height: 25px;
 	padding-top: 2px;
 	margin-left: 61.5px;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner2 .i-right p{
-	font-size: 1.171vw; 
-	font-family: Gilroy; 
-	font-style: normal; 
-	font-weight: 800; 
-	color: #C4C4C4; 
+	font-size: 1.171vw;
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	color: #C4C4C4;
 	letter-spacing: 0.03em;
 }
 
@@ -6226,28 +6226,28 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box .inside-box1 .inner3{
-	width: 194.5px; 
-	height: 25px; 
+	width: 194.5px;
+	height: 25px;
 	margin-bottom: 30px;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner3 .i-left{
 	position: relative;
-    width:61.5px; 
-    height: 25px; 
-    vertical-align: center; 
+    width:61.5px;
+    height: 25px;
+    vertical-align: center;
     float: left;
     display: none;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner3 .i-left img{
-	width: 33px; 
-	color: #E84F45; 
+	width: 33px;
+	color: #E84F45;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner3 .i-right{
-	width: 120px; 
-	height: 25px; 
+	width: 120px;
+	height: 25px;
 	padding-top: 2px;
 	margin-left: 61.5px;
 	position: relative;
@@ -6255,11 +6255,11 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box .inside-box1 .inner3 .i-right p{
-	font-size: 1.171vw; 
-	font-family: Gilroy; 
-	font-style: normal; 
-	font-weight: 800; 
-	color: #C4C4C4; 
+	font-size: 1.171vw;
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	color: #C4C4C4;
 	letter-spacing: 0.03em;
 }
 
@@ -6275,40 +6275,40 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 	color: #E84F45;
 }
 .footer .footer-content .content-box .inside-box1 .inner4{
-	width: 194.5px; 
-	height: 25px; 
+	width: 194.5px;
+	height: 25px;
 	margin-bottom: 30px;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner4 .i-left{
 	position: relative;
-    width:61.5px; 
-    height: 25px; 
-    vertical-align: center; 
+    width:61.5px;
+    height: 25px;
+    vertical-align: center;
     float: left;
     display: none;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner4 .i-left img{
-    width: 33px; 
+    width: 33px;
 }
 
 
 .footer .footer-content .content-box .inside-box1 .inner4 .i-right{
 	position: relative;
 	float: left;
-	width: 160; 
-	height: 25px; 
+	width: 160;
+	height: 25px;
 	padding-top: 2px;
 	margin-left: 61.5px;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner4 .i-right p{
-    font-size: 1.171vw; 
-    font-family: Gilroy; 
-    font-style: normal; 
-    font-weight: 800; 
-    color: #C4C4C4; 
+    font-size: 1.171vw;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    color: #C4C4C4;
     letter-spacing: 0.03em;
 }
 
@@ -6321,41 +6321,41 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box .inside-box1 .inner4:hover .i-right p{
-    color: #E84F45; 
+    color: #E84F45;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner5{
-	width: 194.5px; 
-	height: 25px; 
+	width: 194.5px;
+	height: 25px;
 	margin-bottom: 30px;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner5 .i-left{
-    width:61.5px; 
-    height: 25px; 
-    vertical-align: center; 
+    width:61.5px;
+    height: 25px;
+    vertical-align: center;
     float: left;
     display: none;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner5 .i-left img{
-    width: 33px; 
+    width: 33px;
 }
 
 
 .footer .footer-content .content-box .inside-box1 .inner5 .i-right{
-	width: 160; 
-	height: 25px; 
+	width: 160;
+	height: 25px;
 	padding-top: 2px;
 	margin-left: 61.5px;
 }
 
 .footer .footer-content .content-box .inside-box1 .inner5 .i-right p{
-    font-size: 1.171vw; 
-    font-family: Gilroy; 
-    font-style: normal; 
-    font-weight: 800; 
-    color: #C4C4C4; 
+    font-size: 1.171vw;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    color: #C4C4C4;
     letter-spacing: 0.03em;
 }
 
@@ -6369,47 +6369,47 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box .inside-box1 .inner5:hover .i-right p{
-    color: #E84F45; 
+    color: #E84F45;
 }
 
 .footer .footer-content .content-box .inside-box2{
-	width: fit-content; 
-	height:300px; 
+	width: fit-content;
+	height:300px;
 	bottom: 50px;
 }
 
 .footer .footer-content .content-box .inside-box2 .title-box1{
-	width: 194.5px; 
-	height: 25px; 
+	width: 194.5px;
+	height: 25px;
 	margin-bottom: 30px;
 }
 .footer .footer-content .content-box .inside-box2 .title-box1 .title-box1-text{
-	width: 160; 
-	height: 25px; 
+	width: 160;
+	height: 25px;
 	padding-top: 2px;
 }
 .footer .footer-content .content-box .inside-box2 .title-box1 .title-box1-text p{
-	font-size: 1.75vw; 
-	font-family: Gilroy; 
-	font-style: normal; 
-	font-weight: 800; 
-	color: #E84F45; 
-	letter-spacing: 0.03em; 
+	font-size: 1.75vw;
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	color: #E84F45;
+	letter-spacing: 0.03em;
 	padding-bottom: 20px;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-upper{
-	width: 194.5px; 
-	height: 80px; 
+	width: 194.5px;
+	height: 80px;
 	margin-bottom: 10px;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-upper .fb-box{
-	width:80px; 
-	height: 80px; 
-	float: left; 
-	position: relative; 
-	border: 1px solid #DADADA; 
+	width:80px;
+	height: 80px;
+	float: left;
+	position: relative;
+	border: 1px solid #DADADA;
 	display: inline-block;
 }
 
@@ -6420,14 +6420,14 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 
 
 .footer .footer-content .content-box .inside-box2 .social-box-upper .fb-box .fb-regular{
-	position: absolute; 
-	left: 35px; 
+	position: absolute;
+	left: 35px;
 	bottom: 30px;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-upper .fb-box .fb-hover{
-	position: absolute; 
-	left: 35px; 
+	position: absolute;
+	left: 35px;
 	bottom: 30px;
 	display: none;
 }
@@ -6441,26 +6441,26 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-upper .tweeter-box{
-	display: inline-block; 
-	width: 80px; 
-	height: 80px; 
-	margin-left: 10px; 
-	border: 1px solid #DADADA; 
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+	border: 1px solid #DADADA;
 	position: relative;
 }
 .footer .footer-content .content-box .inside-box2 .social-box-upper .tweeter-box:hover {
-	border: 1px solid #E84F45; 
+	border: 1px solid #E84F45;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-upper .tweeter-box .regular{
-	position: absolute; 
-	left: 30px; 
+	position: absolute;
+	left: 30px;
 	bottom: 30px;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-upper .tweeter-box .hover{
-	position: absolute; 
-	left: 30px; 
+	position: absolute;
+	left: 30px;
 	bottom: 30px;
 	display: none;
 }
@@ -6474,39 +6474,39 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower{
-	width: 194.5px; 
-	height: 80px; 
+	width: 194.5px;
+	height: 80px;
 	margin-bottom: 10px;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower .instagram-box{
-	width:80px; 
-	height: 80px; 
-	float: left; 
-	position: relative; 
-	border: 1px solid #DADADA; 
+	width:80px;
+	height: 80px;
+	float: left;
+	position: relative;
+	border: 1px solid #DADADA;
 	display: inline-block;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower .instagram-box:hover {
-	border: 1px solid #E84F45; 
+	border: 1px solid #E84F45;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower .instagram-box .outer-insta{
-	position: absolute; 
-	left: 30px; 
+	position: absolute;
+	left: 30px;
 	bottom: 30px;
 }
-	
+
 .footer .footer-content .content-box .inside-box2 .social-box-lower .instagram-box .inner-insta{
-    position: absolute; 
-    left: 35px; 
+    position: absolute;
+    left: 35px;
     bottom: 35px;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower .instagram-box .insta-hover{
-	position: absolute; 
-	left: 30px; 
+	position: absolute;
+	left: 30px;
 	bottom: 30px;
 	display: none;
 }
@@ -6524,33 +6524,33 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower .youtube-box{
-	display: inline-block; 
-	width: 80px; 
-	height: 80px; 
-	margin-left: 10px; 
-	border: 1px solid #DADADA; 
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+	border: 1px solid #DADADA;
 	position: relative;
-} 
+}
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower .youtube-box:hover {
     border: 1px solid #E84F45;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower .youtube-box .yt-1{
-    position: absolute; 
-    left: 30px; 
+    position: absolute;
+    left: 30px;
     bottom: 32px;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower .youtube-box .yt-2{
-    position: absolute; 
-    left: 38px; 
+    position: absolute;
+    left: 38px;
     bottom: 36px;
 }
 
 .footer .footer-content .content-box .inside-box2 .social-box-lower .youtube-box .yt-hover{
-	position: absolute; 
-    left: 30px; 
+	position: absolute;
+    left: 30px;
     bottom: 32px;
     display: none;
 }
@@ -6698,37 +6698,37 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .footer .footer-content-mobile .follow_us .title-box1{
-	width: 194.5px; 
-	height: 25px; 
+	width: 194.5px;
+	height: 25px;
 	margin-bottom: 30px;
 }
 .footer .footer-content-mobile .follow_us .title-box1 .title-box1-text{
-	width: 160; 
-	height: 25px; 
+	width: 160;
+	height: 25px;
 	padding-top: 2px;
 }
 .footer .footer-content-mobile .follow_us .title-box1 .title-box1-text p{
-	font-size: 24px; 
-	font-family: Gilroy; 
-	font-style: normal; 
-	font-weight: 800; 
-	color: #E84F45; 
-	letter-spacing: 0.03em; 
+	font-size: 24px;
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	color: #E84F45;
+	letter-spacing: 0.03em;
 	padding-bottom: 20px;
 }
 
 .footer .footer-content-mobile .follow_us .social-box-upper{
-	width: 194.5px; 
-	height: 80px; 
+	width: 194.5px;
+	height: 80px;
 	margin-bottom: 10px;
 }
 
 .footer .footer-content-mobile .follow_us .social-box-upper .fb-box{
-	width:80px; 
-	height: 80px; 
-	float: left; 
-	position: relative; 
-	border: 1px solid #E84F45; 
+	width:80px;
+	height: 80px;
+	float: left;
+	position: relative;
+	border: 1px solid #E84F45;
 	display: inline-block;
 }
 
@@ -6739,14 +6739,14 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 
 
 /*.footer .footer-content-mobile .follow_us .social-box-upper .fb-box .fb-regular{
-	position: absolute; 
-	left: 35px; 
+	position: absolute;
+	left: 35px;
 	bottom: 30px;
 }*/
 
 .footer .footer-content-mobile .follow_us .social-box-upper .fb-box .fb-hover{
-	position: absolute; 
-	left: 35px; 
+	position: absolute;
+	left: 35px;
 	bottom: 30px;
 }
 
@@ -6759,26 +6759,26 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }*/
 
 .footer .footer-content-mobile .follow_us .social-box-upper .tweeter-box{
-	display: inline-block; 
-	width: 80px; 
-	height: 80px; 
-	margin-left: 10px; 
-	border: 1px solid #E84F45; 
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+	border: 1px solid #E84F45;
 	position: relative;
 }
 /*.footer .footer-content-mobile .follow_us .social-box-upper .tweeter-box:hover {
-	border: 1px solid #E84F45; 
+	border: 1px solid #E84F45;
 }*/
 
 .footer .footer-content-mobile .follow_us .social-box-upper .tweeter-box .regular{
-	position: absolute; 
-	left: 30px; 
+	position: absolute;
+	left: 30px;
 	bottom: 30px;
 }
 
 .footer .footer-content-mobile .follow_us .social-box-upper .tweeter-box .hover{
-	position: absolute; 
-	left: 30px; 
+	position: absolute;
+	left: 30px;
 	bottom: 30px;
 }
 
@@ -6791,39 +6791,39 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }*/
 
 .footer .footer-content-mobile .follow_us .social-box-lower{
-	width: 194.5px; 
-	height: 80px; 
+	width: 194.5px;
+	height: 80px;
 	margin-bottom: 10px;
 }
 
 .footer .footer-content-mobile .follow_us .social-box-lower .instagram-box{
-	width:80px; 
-	height: 80px; 
-	float: left; 
-	position: relative; 
-	border: 1px solid #E84F45; 
+	width:80px;
+	height: 80px;
+	float: left;
+	position: relative;
+	border: 1px solid #E84F45;
 	display: inline-block;
 }
 
 .footer .footer-content-mobile .follow_us .social-box-lower .instagram-box:hover {
-	border: 1px solid #E84F45; 
+	border: 1px solid #E84F45;
 }
 
 .footer .footer-content-mobile .follow_us .social-box-lower .instagram-box .outer-insta{
-	position: absolute; 
-	left: 30px; 
+	position: absolute;
+	left: 30px;
 	bottom: 30px;
 }
-	
+
 .footer .footer-content-mobile .follow_us .social-box-lower .instagram-box .inner-insta{
-    position: absolute; 
-    left: 35px; 
+    position: absolute;
+    left: 35px;
     bottom: 35px;
 }
 
 .footer .footer-content-mobile .follow_us .social-box-lower .instagram-box .insta-hover{
-	position: absolute; 
-	left: 30px; 
+	position: absolute;
+	left: 30px;
 	bottom: 30px;
 }
 
@@ -6840,30 +6840,30 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }*/
 
 .footer .footer-content-mobile .follow_us .social-box-lower .youtube-box{
-	display: inline-block; 
-	width: 80px; 
-	height: 80px; 
-	margin-left: 10px; 
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
 	border: 1px solid #E84F45;
 	position: relative;
-} 
+}
 
 
 /*.footer .footer-content-mobile .follow_us .social-box-lower .youtube-box .yt-1{
-    position: absolute; 
-    left: 30px; 
+    position: absolute;
+    left: 30px;
     bottom: 32px;
 }*/
 
 /*.footer .footer-content-mobile .follow_us .social-box-lower .youtube-box .yt-2{
-    position: absolute; 
-    left: 38px; 
+    position: absolute;
+    left: 38px;
     bottom: 36px;
 }*/
 
 .footer .footer-content-mobile .follow_us .social-box-lower .youtube-box .yt-hover{
-	position: absolute; 
-    left: 30px; 
+	position: absolute;
+    left: 30px;
     bottom: 32px;
 }
 
@@ -6932,7 +6932,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 /*.o_logoru_container .inside_box1 .inner1 .i-right p{
-	
+
 }*/
 
 .o_logoru_container .inside-box1 .inner2{
@@ -7106,7 +7106,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
-	line-height: 186%;	
+	line-height: 186%;
 	color:#000000;
 }
 
@@ -7121,7 +7121,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 .galerija-slajder{
     width: 1010px;
     height: 1070px;
-    position: relative; 
+    position: relative;
 }
 
 .galerija-slajder .foto_galerija{
@@ -7163,7 +7163,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 .galerija-container .controls .prev{
     width: 90px;
     height: 90px;
-    position: absolute;   
+    position: absolute;
     left: 0%;
     display: flex;
     justify-content: center;
@@ -7175,7 +7175,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 .galerija-container .controls .next{
     width: 90px;
     height: 90px;
-    position: absolute;   
+    position: absolute;
     right: 0%;
     display: flex;
     justify-content: center;
@@ -7239,7 +7239,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 /*.o_logoru_container .inside_box1 .inner1 .i-right p{
-	
+
 }*/
 
 .arhiva_container .inside-box1 .inner2{
@@ -7506,7 +7506,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .arhiva_container .inside_box2_slajder .inside_box2  .clanak .desni .donji .d_desni img{
-    
+
 }
 
 
@@ -7547,7 +7547,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .arhiva_container .inside_box3_slajder .inside_box2  .clanak .levi{
-    width: 46.66%; /*350px;*/   
+    width: 46.66%; /*350px;*/
     height: 270px;
     margin-right: 6.8%; /*51px;*/
     background-color: gray;
@@ -7634,7 +7634,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .arhiva_container .inside_box3_slajder .inside_box2  .clanak .desni .donji .d_desni img{
-    
+
 }
 
 
@@ -7763,7 +7763,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .arhiva_container .inside_box4_slajder .inside_box2  .clanak .desni .donji .d_desni img{
-    
+
 }
 
 .arhiva_container .inside_box5_slajder{
@@ -7890,7 +7890,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .arhiva_container .inside_box5_slajder .inside_box2  .clanak .desni .donji .d_desni img{
-    
+
 }
 
 .arhiva_container .inside_box6_slajder{
@@ -8017,7 +8017,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .arhiva_container .inside_box6_slajder .inside_box2  .clanak .desni .donji .d_desni img{
-    
+
 }
 
 
@@ -8043,7 +8043,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 .arhiva_container .controls .prev{
     width: 90px;
     height: 90px;
-    position: absolute;   
+    position: absolute;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -8055,7 +8055,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 .arhiva_container .controls .next{
     width: 90px;
     height: 90px;
-    position: absolute;   
+    position: absolute;
     right: 0%;
     display: flex;
     justify-content: center;
@@ -8580,7 +8580,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 
 .baza-title{
 	margin-top: 56.91px;
-	margin-bottom: 23.71px;	
+	margin-bottom: 23.71px;
 	width: 1024.5px;
 	height: 52.17px;
 	font-family: Roboto;
@@ -8673,7 +8673,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .table-container{
-	width: 865.08px;	
+	width: 865.08px;
 	margin-left: 215.632px;
 	margin-bottom: 100px;
 }
@@ -8807,7 +8807,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 	top: 29.37vw; /*401.26px;*/
 	width: 3.74vw;/*51.22px;*/
 	height: 3.74vw; /*51.22px;*/
-	right: 51.80vw; /*707.66px;*/ 
+	right: 51.80vw; /*707.66px;*/
 	background-color: #324E6B;
 	display: flex;
     justify-content: center;
@@ -8834,7 +8834,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 	top: 29.37vw; /*401.26px;*/
 	width: 3.74vw;/*51.22px;*/
 	height: 3.74vw; /*51.22px;*/
-	right: 51.80vw; /*707.66px;*/ 
+	right: 51.80vw; /*707.66px;*/
 	background-color: #324E6B;
 	/*display: flex;*/
     justify-content: center;
@@ -8862,7 +8862,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 	top: 29.37vw; /*401.26px;*/
 	width: 3.74vw;/*51.22px;*/
 	height: 3.74vw; /*51.22px;*/
-	right: 51.80vw; /*707.66px;*/ 
+	right: 51.80vw; /*707.66px;*/
 	background-color: #324E6B;
 	/*display: flex;*/
     justify-content: center;
@@ -8901,7 +8901,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 .index-project-number1{
 	position: absolute;
     width: 7.63vw;
-    height: 4.30vw;	
+    height: 4.30vw;
     left: 6.31vw;
     top: 37.01vw;
     font-family: Gilroy;
@@ -8916,7 +8916,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 .index-project-number2{
 	position: absolute;
     width: 7.63vw;
-    height: 4.30vw;	
+    height: 4.30vw;
     left: 6.31vw;
     top: 37.01vw;
     font-family: Gilroy;
@@ -8932,7 +8932,7 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 .index-project-number3{
 	position: absolute;
     width: 7.63vw;
-    height: 4.30vw;	
+    height: 4.30vw;
     left: 6.31vw;
     top: 37.01vw;
     font-family: Gilroy;
@@ -9035,8 +9035,8 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 /*-------------------------------------------------O PROJEKTU-------------------------------------------------*/
 
 .o_projektu_container{
-	width:550px; 
-	height: auto; 
+	width:550px;
+	height: auto;
 	margin: 50px auto;
 }
 
@@ -9053,10 +9053,10 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 }
 
 .o_projektu_container .text{
-	width: 550px; 
-	font-family: Roboto; 
-	font-size: 14px; 
-	line-height: 26px; 
+	width: 550px;
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 26px;
 	color: #000000;
 }
 
@@ -9065,9 +9065,9 @@ Dodatni css za svaku kategoriju da bi odgovarajuce dugme postalo crveno kada smo
 
 /*-----------------------------------MEDIA QUERIES------------------------------------------------*/
 
-/*@media only screen 
-and (min-device-width: 200px) 
-and (max-device-width: 600px){ 
+/*@media only screen
+and (min-device-width: 200px)
+and (max-device-width: 600px){
     .menu-dropdown{
 		display: block;
 		transform: translateX(100%);
@@ -9106,7 +9106,7 @@ and (max-device-width: 600px){
 	.galerija-slajder{
 	    width: 80.8vw; /*1010px;*/
 	    height: 85.6vw; /*1070px;*/
-	    position: relative; 
+	    position: relative;
 	}
 
 	.galerija-slajder .foto_galerija{
@@ -9148,7 +9148,7 @@ and (max-device-width: 600px){
 	.galerija-container .controls .prev{
 	    width: 7.2vw; /*90px;*/
 	    height: 7.2vw; /*90px;*/
-	    position: absolute;   
+	    position: absolute;
 	    left: 0%;
 	    display: flex;
 	    justify-content: center;
@@ -9160,7 +9160,7 @@ and (max-device-width: 600px){
 	.galerija-container .controls .next{
 	    width: 7.2vw; /*90px;*/
 	    height: 7.2vw; /*90px;*/
-	    position: absolute;   
+	    position: absolute;
 	    right: 0%;
 	    display: flex;
 	    justify-content: center;
@@ -9268,12 +9268,12 @@ and (max-device-width: 600px){
 	}
 
 	.table-container{
-		width: 69.20vw; /*865.08px;*/	
+		width: 69.20vw; /*865.08px;*/
 		margin-left: 13.5vw; /*207.632px;*/
 		margin-bottom: 8vw; /*100px;*/
 	}
 
-	.table-slider{	
+	.table-slider{
 		width: 100%;
 		height: auto;
 		overflow: hidden;
@@ -9344,7 +9344,7 @@ and (max-device-width: 600px){
 		margin-left: auto;
 		margin-right: auto;
 		height: auto;
-	} 
+	}
 	.container .partneri_container .levi{
 		float: none;
 	}
@@ -9388,7 +9388,7 @@ and (max-device-width: 600px){
 	    position: relative;
 		width: 100%;
 		height: 100%;
-		/*border:1px solid red;*/	
+		/*border:1px solid red;*/
 	/*	margin-top: 4.51vw;
 		margin-bottom: 4.51vw;
 		margin-left: auto;
@@ -9443,7 +9443,7 @@ and (max-device-width: 600px){
 
 	.o_projektu_container{
 		width: 64.32vw; /*550px; */
-		height: auto; 
+		height: auto;
 		margin: 5.84vw auto;
 	}
 
@@ -9460,9 +9460,9 @@ and (max-device-width: 600px){
 	}
 
 	.o_projektu_container .text{
-		width: 64.32vw; /*550px;*/ 
-		font-family: Roboto; 
-		font-size: 1.63vw; /*14px;*/ 
+		width: 64.32vw; /*550px;*/
+		font-family: Roboto;
+		font-size: 1.63vw; /*14px;*/
 		line-height: 3.04vw; /*26px; */
 		color: #000000;
 	}
@@ -10040,8 +10040,8 @@ and (max-device-width: 600px){
 .arhiva_container .controls .prev{
     width: 8vw; /*90px;*/
     height: 8vw; /*90px;*/
-    position: absolute;   
-    
+    position: absolute;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10059,18 +10059,18 @@ and (max-device-width: 600px){
 		}
 
     ul.nav-links a{
-    	font-size: 1.15vw; 
+    	font-size: 1.15vw;
     }
     .nav-links .h_tours a{
-    	font-size: 1.15vw; 
+    	font-size: 1.15vw;
     }
     .nav-links .o_nama a{
     	font-size: 1.15vw;
     }
-     
+
     .nav-links .publications a{
     	font-size: 1.15vw;
-    } 
+    }
 
     .arhiva_container{
     	width: 95.02vw; /*1060px*/
@@ -10120,7 +10120,7 @@ and (max-device-width: 600px){
 	}
 
 	/*.o_logoru_container .inside_box1 .inner1 .i-right p{
-		
+
 	}*/
 
 	.arhiva_container .inside-box1 .inner2{
@@ -10397,7 +10397,7 @@ and (max-device-width: 600px){
 	.container .foto_galerija div:nth-child(3n){
         margin-right: 10px;
 
-	} 
+	}
 
 	#container-gallery .foto_galerija{
 		width: 680px;
@@ -10455,7 +10455,7 @@ and (max-device-width: 600px){
 	}
 
 	/*.o_logoru_container .inside_box1 .inner1 .i-right p{
-		
+
 	}*/
 
 	.o_logoru_container .inside-box1 .inner2{
@@ -10519,7 +10519,7 @@ and (max-device-width: 600px){
 		font-family: Gilroy;
 		font-style: normal;
 		font-weight: 800;
-		font-size: 1.42vw; 
+		font-size: 1.42vw;
 		line-height: 187%;
 		text-transform: uppercase;
 		color:#324E6B;
@@ -10627,7 +10627,7 @@ and (max-device-width: 600px){
 		font-style: normal;
 		font-weight: normal;
 		font-size: 14px;
-		line-height: 186%;	
+		line-height: 186%;
 		color:#000000;
 	}
 }
@@ -10662,7 +10662,7 @@ and (max-device-width: 600px){
     .container .o_nama_meni .menu-itemG {
         width: 18.94vw;
         /*height: 6.31vw;*/
-    } 
+    }
 
     .container .o_nama_meni .menu-itemR {
         width: 18.94vw;
@@ -10697,7 +10697,7 @@ and (max-device-width: 600px){
 		width: 262px;
 	}
 
-	
+
 	.Publications-container-mobile .publikacija-box{
 		position: relative;
 		width: 262px;
@@ -10812,7 +10812,7 @@ and (max-device-width: 600px){
 
 	.Publications-container-mobile .publikacija-box .publikacija:hover .lower-part{
 		display: block;
-	} 
+	}
 
 	.Publications-container-mobile .publikacija-box .publikacija .lower-part .autor{
 		width: 115px;
@@ -10928,7 +10928,7 @@ and (max-device-width: 600px){
 	}
 
 	/*.o_logoru_container .inside_box1 .inner1 .i-right p{
-		
+
 	}*/
 
 	.o_logoru_container .inside-box1 .inner2{
@@ -11099,7 +11099,7 @@ and (max-device-width: 600px){
 		font-style: normal;
 		font-weight: normal;
 		font-size: 14px;
-		line-height: 186%;	
+		line-height: 186%;
 		color:#000000;
 	}
 
@@ -11112,7 +11112,7 @@ and (max-device-width: 600px){
 		margin-top: 0vh;
 
 		background-color: #E84F45;
-		display: flex;	
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 		list-style: none;
@@ -11186,7 +11186,7 @@ and (max-device-width: 600px){
 		opacity: 1;
 	}
 
-	
+
     .burger{
         display: block;
 		position: absolute;
@@ -11284,7 +11284,7 @@ and (max-device-width: 600px){
 		height: 10px;
 	}
 
-	.gallery-mobile{	
+	.gallery-mobile{
 		display: block;
 	}
 
@@ -11297,7 +11297,7 @@ and (max-device-width: 600px){
 		height: auto;
 		margin-bottom: 71px;
 	}
-    
+
     .video .title_section{
 		width: 83.87%;
 		margin-left: 15%;
@@ -11330,7 +11330,7 @@ and (max-device-width: 600px){
     .publications_section .p_title_section{
     	width: 304px;
     }
-    
+
     .publications_section .p_title_section .p_title_underbar{
     	width: 100%;
     }
@@ -11339,7 +11339,7 @@ and (max-device-width: 600px){
         right: 0px;
         bottom: 0px;
         display: flex;
-    }    
+    }
 
      .publications_section .publications_content{
         height: 660px;
@@ -11355,11 +11355,11 @@ and (max-device-width: 600px){
     }
 
     .publications_section .publications_content .publications_slider .p-slide-wrapper{
-    	width: 260px; 
+    	width: 260px;
     }
 
     div.p-slide-upper{
-    	width: 230px; 
+    	width: 230px;
     }
 
     .publications_section .publications_content .publications_slider .p-slide-wrapper .publications_slide:hover .p-slide-lower{
@@ -11422,7 +11422,7 @@ and (max-device-width: 600px){
     }
     .footer .footer-content{
     	display: none;
-    } 
+    }
 
     .footer .footer-content-mobile{
     	display: block;
@@ -11439,7 +11439,7 @@ and (max-device-width: 600px){
 
     .footer .footer-bottom .mobile-image1{
     	display: block;
-    }  
+    }
 
     .footer .footer-bottom .mobile-image2{
     	display: block;
@@ -11481,7 +11481,7 @@ and (max-device-width: 600px){
     	width: 250px;
     	height: 250px;
     }
-	
+
 	.container .tim .gornji .gornji-desni{
 		margin-top: 20px;
 		margin-bottom: 57px;
@@ -11529,7 +11529,7 @@ and (max-device-width: 600px){
     #container-gallery .foto_galerija{
 		width: 300px;
 	}
-    
+
     .container .foto_galerija div{
     	width: 300px;
     }
@@ -11649,7 +11649,7 @@ and (max-device-width: 600px){
 	}
 
 /*----------------------------------PRESS MOBILNA-720--------------------------------*/
-    
+
 
 	.container .press_container{
 		width: 300px;
@@ -11781,7 +11781,7 @@ and (max-device-width: 600px){
     	display: block;
     }
 
-/*-----------------------------------PROJEKAT-DETALJI--------------------------------------------------*/    
+/*-----------------------------------PROJEKAT-DETALJI--------------------------------------------------*/
 
     .projekat-detalji{
     	display: none;
@@ -11851,7 +11851,7 @@ and (max-device-width: 600px){
 
 /*--------------------------------PUBLIKACIJE-DETALJI MOBILNA--------------------------------------*/
 
-	
+
 
 }
 
