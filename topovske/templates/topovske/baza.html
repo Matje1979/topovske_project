@@ -4,22 +4,22 @@
 {% block content %}
     <div class="baza-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</div>
     <div class="baza-forms">
-    	<form class="surname" action="" method="get">
+    	<form class="surname" action="/baza_podataka/" method="get">
     		<input class="b-input" type="text" name="surname" placeholder="Prezime">
     		<button  class="m-glass" type="submit">
     			 <img src="{% static 'topovske/images/vector9.png' %}">
     		</button>
     	</form>
-    	<form class="nationality" action="" method="get">
+    	<form class="nationality" action="/baza_podataka/" method="get">
     		<input class="b-input" type="text" name="nationality" placeholder="Nacionalnost">
     		<button  class="m-glass" type="submit">
-    		<!-- 	<i class="fa fa-search" aria-hidden="true"></i> -->
     		    <img src="{% static 'topovske/images/vector9.png' %}">
     		</button>
     	</form>
     </div>
     <div class="table-container">
 	    <div class="table-slider">
+_
 		    <div class="table-page">
 			    <table class="table">
 			    	<tr>
@@ -30,274 +30,16 @@
 			    		<th>MESTO BORAVKA</th>
 			    		<th>IZVOR</th>
 			    	</tr>
+                    {% for victim in victims %}
 			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
+			    		<td>{{ victim.surname }}</td>
+			    		<td>{{ victim.name }}</td>
+			    		<td>{{ victim.nationality }}</td>
+			    		<td>{{ victim.date_of_birth }}</td>
+			    		<td>{{ victim.location }}</td>
+			    		<td>{{ victim.source }}</td>
 			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    </table>
-			</div>  <!-- .table-page -->
-		    <div class="table-page">
-			    <table class="table">
-			    	<tr>
-			    		<th>PREZIME</th>
-			    		<th>IME</th>
-			    		<th>NACIONALNOST</th>
-			    		<th>DATUM RODJENJA</th>
-			    		<th>MESTO BORAVKA</th>
-			    		<th>IZVOR</th>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Prezime</td>
-			    		<td>Ime</td>
-			    		<td>Nacionalnost</td>
-			    		<td>18.02.2020</td>
-			    		<td>Beograd</td>
-			    		<td>Izvor</td>
-			    	</tr>
+                    {% endfor %}
 			    </table>
 			</div>  <!-- .table-page -->
 		</div> <!-- table slider -->

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Index, Project
+from .models import Index, Project, Victim
 
 # Create your views here.
 
@@ -71,15 +71,13 @@ def archive(request):
 
 
 def dbase(request):
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
+    victims = Victim.objects.all()
+    if 'surname' in request.GET:
+        victims = victims.filter(surname=request.GET.get('surname'))
+    if 'nationality' in request.GET:
+        victims = victims.filter(nationality=request.GET.get('nationality'))
     location = "baza_podataka"
-    context = {"location": location, "url": url}
+    context = {"victims": victims, "location": location}
     return render(request, 'topovske/baza.html', context)
 
 

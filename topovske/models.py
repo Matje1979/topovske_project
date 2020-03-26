@@ -62,6 +62,9 @@ class Victim(models.Model):
     surname = models.CharField(max_length=255)
     nationality = models.CharField(max_length=255)
     date_of_birth = models.DateField(auto_now=False, auto_now_add=False)
+    location = models.CharField(max_length=255, blank=True, default=None)
+    source = models.CharField(max_length=255, blank=True, default=None)
+
 
     def __str__(self):
         return ' '.join([self.name, self.surname])
