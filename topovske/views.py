@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Index, Project, Victim
+from django.core.paginator import Paginator
+from .models import Index, Project, Victim, Photo
 
 # Create your views here.
 
@@ -45,15 +46,12 @@ def map(request):
 
 
 def foto(request):
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
+    photos = Photo.objects.all()
+    paginator = Paginator(photos, 25)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     location = "foto"
-    context = {"location": location, "url": url}
+    context = {"location": location, "page_obj": page_obj}
     return render(request, 'topovske/foto.html', context)
 
 
