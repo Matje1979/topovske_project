@@ -20,15 +20,8 @@ def project(request):
 
 
 def logor(request):
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
     location = "logor"
-    context = {"location": location, "url": url}
+    context = {"location": location}
     return render(request, 'topovske/o_logoru.html', context)
 
 

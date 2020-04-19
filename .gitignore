@@ -1,7 +1,9 @@
 .env
 __pycache__/
 */__pycache__
+*/__pycache__/*
 topovske/__pycache__/*
+topovske_project/__pycache__/*
 topovske/migrations/__pycache__/*
 .idea/
 venv
