@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
+    'location_field.apps.DefaultConfig',
     'ckeditor',
 ]
 
@@ -138,6 +139,10 @@ LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')
 ]
 
+LOCATION_FIELD = {
+    'map.provider': 'openstreetmap',
+    'provider.openstreetmap.max_zoom': 18,
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

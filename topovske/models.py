@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from location_field.models.plain import PlainLocationField
 
 # Create your models here.
 
@@ -54,7 +55,8 @@ class Archive(models.Model):
 
 
 class Location(models.Model):
-    pass
+    city = models.CharField(max_length=255, default='Belgrade')
+    location = PlainLocationField(based_fields=['city'], zoom=7, default='44.79688084502436,20.477120876312256')
 
 
 class Victim(models.Model):
@@ -64,7 +66,6 @@ class Victim(models.Model):
     date_of_birth = models.DateField(auto_now=False, auto_now_add=False)
     location = models.CharField(max_length=255, blank=True, default=None)
     source = models.CharField(max_length=255, blank=True, default=None)
-
 
     def __str__(self):
         return ' '.join([self.name, self.surname])
