@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from .models import Index, Project, Victim, Photo
+from .models import Index, Project, Victim, Photo, Location
 
 # Create your views here.
 
@@ -26,15 +26,9 @@ def logor(request):
 
 
 def map(request):
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
+    locations = Location.objects.all()
     location = "mapa"
-    context = {"location": location, "url": url }
+    context = {"location": location, "locations": locations}
     return render(request, 'topovske/mapa.html', context)
 
 

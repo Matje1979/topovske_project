@@ -545,6 +545,10 @@ a {
 /*	display:none;*/
 /*}*/
 
+#map {
+	height: 400px;
+}
+
 .close-box p{
 	width: 15px;
 	height: 15px;
