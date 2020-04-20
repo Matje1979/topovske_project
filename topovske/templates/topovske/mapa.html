@@ -18,7 +18,7 @@
     {% for loc in locations %}
     <script>
         L.marker([{{ loc.location }}]).addTo(map)
-            .bindPopup('{{ loc.description | safe }}')
+            .bindPopup('{{ loc.description }}')
             .openPopup();
     </script>
     {% endfor %}

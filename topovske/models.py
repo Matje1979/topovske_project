@@ -60,6 +60,9 @@ class Location(models.Model):
     city = models.CharField(max_length=255, default='Belgrade')
     location = PlainLocationField(based_fields=['city'], zoom=7, default='44.79688084502436,20.477120876312256')
 
+    def __str__(self):
+        return self.title
+
 
 class Victim(models.Model):
     name = models.CharField(max_length=255)
