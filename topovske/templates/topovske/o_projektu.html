@@ -4,89 +4,22 @@
 {% block content %}
     <div class="o_logoru_container" >
         <div class="inside-box1">
-            {% for project in projects %}
-			<div class="inner{{ forloop.counter }}">
+			<div class="inner-0">
 				<div class="i-left">
 					<img src="{% static 'topovske/images/blue_bar.png' %}">
 				</div>
 				<div class="i-right">
-				    {{ project.title_sr }}
+				    {{ projects.title }}
 				</div>
 			</div>
-            {% endfor %}
         </div>
         <div class="inside_box2_istorija" style="margin-bottom: 30px;">
             <div class="logo-big">
                 <img src="{% static 'topovske/images/topovske_big_logo.png' %}">
             </div>
-            {% for project in projects %}
             <div class="text">
-                {{ project.text_sr | safe }}
+                {{ projects.text | safe }}
             </div>
-        {% endfor %}
 		</div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $('.magnifying-glass').hover(function() {
-            $('.search-box-input').css('visibility', "visible");
-        });
-    });
-
-    </script>
-     <script>
-		$(document).ready(function(){
-			$('nav').mouseleave(function() {
-			    $('.search-box-input').css('visibility', "hidden");
-			});	
-		});
-
-    </script>
-     <script>
-		$(document).ready(function(){
-			$('.magnifying-glass').hover(function() {
-			    $('.input-off').css('display', "block");
-			});	
-		});
-
-    </script>
-     <script>
-		$(document).ready(function(){
-			$('.input-off').click(function() {
-			    $('.search-box-input').css('display', "none");
-			});	
-		});
-    </script>
-     <script>
-		$(document).ready(function(){
-			$('.input-off').click(function() {
-			    $('.input-off').css('display', "none");
-			});	
-		});
-    </script>
-    <script>
-		$(document).ready(function(){
-			$('.menu-close-box').click(function() {
-			    $('.menu-dropdown').css('transform', "translateX(100%)");
-			});	
-		});
-    </script>
-
-    <script>
-		$(document).ready(function(){
-			$('.burger').click(function() {
-			    $('.menu-dropdown').css('transform', "translateX(0%)");
-			});	
-		});
-    </script>
-    <script>
-    	$('.container-projekti-mobile .Page_slide').slice(0,1).show();
-    	$('#load-more').on('click', function() {
-            $('.container-projekti-mobile .Page_slide:hidden').slice(0,1).slideDown();
-            if($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
-                $('#load-more').fadeOut();
-            }
-        });
-    </script>
 {% endblock content %}

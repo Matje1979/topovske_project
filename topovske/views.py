@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from .models import Index, Project, Victim, Photo, Location
+from .models import Index, Project, Victim, Photo, Location, CampHistory, Current, PublicCampaign
 
 # Create your views here.
 
@@ -15,13 +15,16 @@ def home(request):
 def project(request):
     projects = Project.objects.all()
     location = "projekat"
-    context = {"projects": projects, "location": location}
+    context = {"projects": projects[0], "location": location}
     return render(request, 'topovske/o_projektu.html', context)
 
 
 def logor(request):
+    camp_history = CampHistory.objects.all()
+    current = Current.objects.all()
+    public_campaign = PublicCampaign.objects.all()
     location = "logor"
-    context = {"location": location}
+    context = {"camp_history": camp_history[0], "current": current[0], "public_campaign": public_campaign[0], "location": location}
     return render(request, 'topovske/o_logoru.html', context)
 
 

@@ -1,6 +1,6 @@
 from modeltranslation.translator import register, TranslationOptions, translator
 
-from topovske.models import Project, Index, Camp, Archive, Victim, Location
+from topovske.models import Project, Index, Camp, Archive, Victim, Location, PublicCampaign, Current, CampHistory
 
 
 class IndexTranslationOptions(TranslationOptions):
@@ -43,4 +43,26 @@ class LocationTranslationOptions(TranslationOptions):
 
 
 translator.register(Location, LocationTranslationOptions)
+
+
+class CampHistoryTranslationOptions(TranslationOptions):
+    fields = ('title', 'text',)
+
+
+translator.register(CampHistory, CampHistoryTranslationOptions)
+
+
+class CurrentTranslationOptions(TranslationOptions):
+    fields = ('title', 'text',)
+
+
+translator.register(Current, CurrentTranslationOptions)
+
+
+class PublicCampaignsOptions(TranslationOptions):
+    fields = ('title', 'text',)
+
+
+translator.register(PublicCampaign, PublicCampaignsOptions)
+
 
