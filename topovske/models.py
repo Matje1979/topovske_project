@@ -5,6 +5,24 @@ from location_field.models.plain import PlainLocationField
 # Create your models here.
 
 
+class SingletonModel(models.Model):
+
+    class Meta:
+        abstract = True
+
+    def save(self, *args, **kwargs):
+        self.pk = 1
+        super(SingletonModel, self).save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        pass
+
+    @classmethod
+    def load(cls):
+        obj, created = cls.objects.get_or_create(pk=1)
+        return obj
+
+
 class Index(models.Model):
     title = models.CharField(max_length=255)
     lead = models.CharField(max_length=255)
@@ -16,7 +34,7 @@ class Index(models.Model):
         return self.title
 
 
-class Project(models.Model):
+class Project(SingletonModel):
     title = models.CharField(max_length=255)
     text = RichTextField()
 
@@ -24,7 +42,31 @@ class Project(models.Model):
         return self.title
 
 
-class Camp(models.Model):
+class CampHistory(SingletonModel):
+    title = models.CharField(max_length=255)
+    text = RichTextField()
+
+    def __str__(self):
+        return self.title
+
+
+class Current(SingletonModel):
+    title = models.CharField(max_length=255)
+    text = RichTextField()
+
+    def __str__(self):
+        return self.title
+
+
+class PublicCampaign(SingletonModel):
+    title = models.CharField(max_length=255)
+    text = RichTextField()
+
+    def __str__(self):
+        return self.title
+
+
+class Camp(SingletonModel):
     title = models.CharField(max_length=255)
     text = RichTextField()
 
