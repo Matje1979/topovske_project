@@ -1,82 +1,25 @@
 {% extends 'topovske/base_template.html' %}
 {% load static %}
-{% load i18n %}
+
 {% block content %}
-    <div class="o_projektu_container" >
-    	<div class="logo-big">
-    		<img src="{% static 'topovske/images/Topovske_big_logo.png' %}">
-    	</div>
-    	<div class="text"><p>Mapiranje Holokausta – očuvanje logora Topovske šupe je naučno-istraživački projekat Centra za primenjenu istoriju, koji ima za cilj da javnosti predstavi istoriju logora Topovske šupe. Projektni tim namerava da izvrši istoriografsko istraživanje logora, mapiranje lokacije i dokumentovanje trenutnog stanja kako bi se trajno očuvalo sećanje na logor i žrtve logora. Istoriografsko istraživanje sastoji se od prikupljanja arhivske građe u arhivima u Srbiji i Nemačkoj, intervjua, izrade baze podataka žrtava logora i objavljivanje rezultata na vebsajtu projekta. U cilju podizanja svesti i alarmiranja domaće i međunarodne javnosti, projektni tim namerava da pokrene javnu kampanju za zaštitu izvornih logorskih objekata od uništenja kao prvi korak ka izgradnji trajnog memorijala Topovske šupe. Svi rezultati projekta nalaze se u formi veb platforme i na taj način dostupni su široj javnosti, na srpskom i na engleskom jeziku.</p><br>
-
-    	<p style="font-weight: bold;">Vebsajt je organizovan po sekcijama:</p></br>
-
-    	<p><span style="font-weight: bold; color: #324E6B;">O logoru</span> – u prvoj sekciji, istorija logora, nalaze se osnovne informacije o postojanju logora Topovske šupe, o žrtvama logora, kao i o Holokaustu u Srbiji; u drugoj sekciji, postojeće stanje, nalaze se informacije o sadašnjem stanju lokacije kao i o budućim planovima</p><br><br>
-    	<p><span style="font-weight: bold; color: #324E6B;">Javna vođenja</span> – video i audio zapisi sa dva javna vođenja koja su organizovana o okviru projekta – prvo vođenje 31. marta 2019, drugo 15. juna 2019. godine</p><br><br>
-    	<p><span style="font-weight: bold; color: #324E6B;"> Arhivski materijal</span> – građa pronađena tokom istraživanja koja govori o logoru i žrtvama, organizovana po sekcijama: pisma, spisak žrtava, svedočenja, dokumenti i slike</p><br><br>
-    	<p><span style="font-weight: bold; color: #324E6B;"> Mapa</span> – mapa Beograda 1944. godine sa označenom lokacijom gde se nalazio logor, kao i drugim povezanim lokacijama; i mapa današnjeg Beograda sa istim lokacijama</p><br><br>
-    	<p><span style="font-weight: bold; color: #324E6B;">Galerija</span> – fotografije lokacije i sa javnih vođenja</p>
+    <div class="o_logoru_container" >
+        <div class="inside-box1">
+			<div class="inner-0">
+				<div class="i-left">
+					<img src="{% static 'topovske/images/blue_bar.png' %}">
+				</div>
+				<div class="i-right">
+				    {{ projects.title }}
+				</div>
+			</div>
+        </div>
+        <div class="inside_box2_istorija" style="margin-bottom: 30px;">
+            <div class="logo-big">
+                <img src="{% static 'topovske/images/topovske_big_logo.png' %}">
+            </div>
+            <div class="text">
+                {{ projects.text | safe }}
+            </div>
+		</div>
     </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script>
-		$(document).ready(function(){
-			$('.magnifying-glass').hover(function() {
-			    $('.search-box-input').css('visibility', "visible");
-			});	
-		});
-
-    </script>
-     <script>
-		$(document).ready(function(){
-			$('nav').mouseleave(function() {
-			    $('.search-box-input').css('visibility', "hidden");
-			});	
-		});
-
-    </script>
-     <script>
-		$(document).ready(function(){
-			$('.magnifying-glass').hover(function() {
-			    $('.input-off').css('display', "block");
-			});	
-		});
-
-    </script>
-     <script>
-		$(document).ready(function(){
-			$('.input-off').click(function() {
-			    $('.search-box-input').css('display', "none");
-			});	
-		});
-    </script>
-     <script>
-		$(document).ready(function(){
-			$('.input-off').click(function() {
-			    $('.input-off').css('display', "none");
-			});	
-		});
-    </script>
-    <script>
-		$(document).ready(function(){
-			$('.menu-close-box').click(function() {
-			    $('.menu-dropdown').css('transform', "translateX(100%)");
-			});	
-		});
-    </script>
-
-    <script>
-		$(document).ready(function(){
-			$('.burger').click(function() {
-			    $('.menu-dropdown').css('transform', "translateX(0%)");
-			});	
-		});
-    </script>
-    <script>
-    	$('.container-projekti-mobile .Page_slide').slice(0,1).show();
-    	$('#load-more').on('click', function() {
-            $('.container-projekti-mobile .Page_slide:hidden').slice(0,1).slideDown();
-            if($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
-                $('#load-more').fadeOut();
-            }
-        });
-    </script>
 {% endblock content %}

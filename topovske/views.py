@@ -1,54 +1,49 @@
 from django.shortcuts import render
+from django.core.paginator import Paginator
+from .models import Index, Project, Victim, Photo, Location, CampHistory, Current, PublicCampaign
 
 # Create your views here.
+
+
 def home(request):
-
     location = "naslovna"
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
-    context = {"location": location, "url": url}
+    indexes = Index.objects.all()
+    context = {"location": location, "indexes": indexes}
     return render(request, 'topovske/index.html', context)
 
+
+def project(request):
+    projects = Project.objects.all()
+    location = "projekat"
+    context = {"projects": projects[0], "location": location}
+    return render(request, 'topovske/o_projektu.html', context)
+
+
 def logor(request):
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
+    camp_history = CampHistory.objects.all()
+    current = Current.objects.all()
+    public_campaign = PublicCampaign.objects.all()
     location = "logor"
-    context = {"location": location, "url": url}
+    context = {"camp_history": camp_history[0], "current": current[0], "public_campaign": public_campaign[0], "location": location}
     return render(request, 'topovske/o_logoru.html', context)
 
+
 def map(request):
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
+    locations = Location.objects.all()
     location = "mapa"
-    context = {"location": location, "url": url }
+    context = {"location": location, "locations": locations}
     return render(request, 'topovske/mapa.html', context)
 
+
 def foto(request):
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
+    photos = Photo.objects.all()
+    paginator = Paginator(photos, 25)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     location = "foto"
-    context = {"location": location, "url": url}
+    context = {"location": location, "page_obj": page_obj}
     return render(request, 'topovske/foto.html', context)
+
 
 def archive(request):
 
@@ -62,17 +57,17 @@ def archive(request):
     context = {"location": location, "url": url}
     return render(request, 'topovske/arhiva.html', context)
 
+
 def dbase(request):
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
+    victims = Victim.objects.all()
+    if 'surname' in request.GET:
+        victims = victims.filter(surname=request.GET.get('surname'))
+    if 'nationality' in request.GET:
+        victims = victims.filter(nationality=request.GET.get('nationality'))
     location = "baza_podataka"
-    context = {"location": location, "url": url}
+    context = {"victims": victims, "location": location}
     return render(request, 'topovske/baza.html', context)
+
 
 def video(request):
 
@@ -85,15 +80,3 @@ def video(request):
     location = "video"
     context = {"location": location, "url": url}
     return render(request, 'topovske/video.html', context)
-
-def project(request):
-
-    url = request.path
-    if 'en' in url:
-        url = url[3:]
-    else:
-        url = url
-
-    location = "projekat"
-    context = {"location": location, "url": url}
-    return render(request, 'topovske/o_projektu.html', context)

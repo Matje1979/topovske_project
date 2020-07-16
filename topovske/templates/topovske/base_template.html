@@ -1,5 +1,8 @@
 {% load i18n %}
+{% load staticfiles %}
 {% load static %}
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +11,13 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+       crossorigin=""/>
 	<link rel="stylesheet" href="{% static 'topovske/css/stylesheet.css' %}">
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+       crossorigin=""></script>
 	<title>Topovske šupe</title>
 </head>
 <body>
@@ -23,17 +32,6 @@
 			<li class="list-item" id="i-ture"><a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a></li>
 			<li class="list-item"><a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a></li>
 		</ul>
-		{% if 'en' not in request.path %}
-	        <ul class="nav-langs">
-	            <li class="light"><a href="{{ url }}">SRB</a></li>
-	            <li class="li-regular"><a href="/en{{ url }}">ENG</a></li>
-	        </ul>
-	    {% else %}
-	        <ul class="nav-langs_en">
-	            <li class="li-regular"><a href="{{ url }}">SRB</a></li>
-	            <li class="light"><a href="/en{{ url }}">ENG</a></li>  
-	        </ul>
-	    {% endif %}
 	</div>
 	{% if location == "naslovna" %}
 		<nav class="nav-index" style="width: 100%;">
@@ -82,14 +80,14 @@
 		        {% else %}
 		            <p class="onam2"></p>
 		        {% endif %}
-		      </li>  
+		      </li>
 		      <li class="o_nama" style="width:auto;">
 		        <a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a>
 		        {% if 'foto' in request.path %}
 		            <p class="onam1"></p>
 		        {% else %}
 		            <p class="onam2"></p>
-		        {% endif %}	
+		        {% endif %}
 		      </li>
 		      <li class="o_nama" style="width:auto;">
 		        <a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a>
@@ -99,21 +97,22 @@
 		            <p class="onam2"></p>
 		        {% endif %}
 		      </li>
-		      <li id="langs">
-		        <span id="langs-img"><img src="{% static 'topovske/images/vektor.png' %}"></span><span><a href="#">ENG</a></span><span><a href="#">SRB</a></span>
-		      </li>
+{#		      <li id="langs">#}
+{#		        <span id="langs-img"><img src="{% static 'topovske/images/vektor.png' %}"></span><span><a href="#">ENG</a></span><span><a href="#">SRB</a></span>#}
+{#		      </li>#}
+                <div class="nav-langs" style="margin-left: 80px;">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="light"><button type="submit">SRB</button></div>
+                        <input type="hidden" name="language" value="sr">
+                    </form>
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="li-regular"><button type="submit">ENG</button></div>
+                        <input type="hidden" name="language" value="en">
+                    </form>
+                </div>
 		    </ul>
-		    {% if 'en' not in request.path %}
-		        <div class="nav-langs" style="margin-left: 80px;">
-		            <div class="light"><a href="{{ url }}">SRB</a></div>
-		            <div class="li-regular"><a href="/en{{ url }}">ENG</a></div>
-		        </div>
-		    {% else %}
-		        <div class="nav-langs_en">
-		          <li class="li-regular"><a href="{{ url }}">SRB</a></li>
-		          <li class="light"><a href="/en{{ url }}">ENG</a></li>
-		        </div>
-		    {% endif %}
 		    <div class="burger" id="burger-alt" style="margin-top: 20px;">
 		      <div class="line1"></div>
 		      <div class="line2"></div>
@@ -167,7 +166,7 @@
 		        {% else %}
 		            <p class="onam2"></p>
 		        {% endif %}
-		      </li>  
+		      </li>
 		      <li class="o_nama" style="width:auto;">
 		        <a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a>
 		        {% if 'foto' in request.path %}
@@ -184,21 +183,25 @@
 		            <p class="onam2"></p>
 		        {% endif %}
 		      </li>
+              <li>
+                  <span id="langs-img"><img src="{% static 'topovske/images/vektor.png' %}"></span>
+              </li>
 		      <li id="langs">
-		        <span id="langs-img"><img src="{% static 'topovske/images/vektor.png' %}"></span><span><a href="#">ENG</a></span><span><a href="#">SRB</a></span>
+                <div class="nav-langs" style="margin-left: 80px;">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="light"><button type="submit">SRB</button></div>
+                        <input type="hidden" name="language" value="sr">
+                    </form>
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="li-regular"><button type="submit">ENG</button></div>
+                        <input type="hidden" name="language" value="en">
+                    </form>
+                </div>
 		      </li>
 		    </ul>
-		    {% if 'en' not in request.path %}
-		        <div class="nav-langs" style="margin-left: 80px;">
-		            <div class="light"><a href="{{ url }}">SRB</a></div>
-		            <div class="li-regular"><a href="/en{{ url }}">ENG</a></div>
-		        </div>
-		    {% else %}
-		        <div class="nav-langs_en">
-		          <li class="li-regular"><a href="{{ url }}">SRB</a></li>
-		          <li class="light"><a href="/en{{ url }}">ENG</a></li>
-		        </div>
-		    {% endif %}
+
 		    <div class="burger" style="margin-top: 20px;">
 		      <div class="line1"></div>
 		      <div class="line2"></div>

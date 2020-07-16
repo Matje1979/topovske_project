@@ -1,46 +1,19 @@
 {% extends 'topovske/base_template.html' %}
 {% load static %}
-{% load i18n %}
+{% load staticfiles %}
+
 {% block content %}
 	<div class="galerija-container">
 		<div class="galerija-slajder">
 			<div class="foto_galerija">
-	            <div  class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
+                {% for image in page_obj %}
+                    <div  class="image-box">
+                        <a href=""><img src="{{ image.file.url }}"/></a>
+                    </div>
+                {% endfor %}
+{#	            <div  class="image-box">#}
+{#	            	<a href=""><img src="#"></a>#}
+{#	            </div>#}
 	            <br style="clear: both;">
 			</div>
 	    </div>

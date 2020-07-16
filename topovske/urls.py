@@ -1,5 +1,9 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls import include, url, re_path
+from . import views
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -11,5 +15,12 @@ urlpatterns = [
     path('baza_podataka/', views.dbase, name="topovske-baza-podataka"),
     path('foto/', views.foto, name="topovske-foto"),
     path('video/', views.video, name="topovske-video"),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
 
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
