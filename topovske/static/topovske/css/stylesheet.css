@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url(Gilroy-ExtraBold.otf);
+        /* url('Gilroy-ExtraBold.eot??#iefix') format('embedded-opentype'),
+         url('gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('gilroy-extrabold-webfont.woff') format('woff'),
+         url('Gilroy-ExtraBold.ttf') format('truetype'),*/
+        /* url('Gilroy-ExtraBold.otf') format('otf');*/
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
 	margin: 0px;
 	padding: 0px;
@@ -1087,7 +1099,7 @@ a {
 	padding-right: 5px;
 	margin-bottom: 4px;
 	margin-top: 2px;
-	font-size: 1.15vw;/*14px;*/
+	font-size: 14px;/*14px;*/
 	font-family: Gilroy;
 	font-weight: 800;
 	letter-spacing: 0.02em;
@@ -1099,7 +1111,7 @@ a {
 	float: left;
 	list-style: none;
 	padding-right: 5px;
-	font-size: 1.15vw; /*14px;*/
+	font-size: 14px; /*14px;*/
 	height: 22px;
 	width: 36px;
 	font-family: Gilroy;
@@ -1116,7 +1128,7 @@ a {
 	padding-right: 5px;
 	margin-bottom: 4px;
 	margin-top: 2px;
-	font-size: 1.15vw;
+	font-size: 14px;
 	color: rgba(200, 200, 200, 0.5);
 	cursor: default;
 	font-family: Gilroy;
