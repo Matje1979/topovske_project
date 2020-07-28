@@ -114,6 +114,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+TRANSLATABLE_MODEL_MODULES = ["topovske.models"]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/

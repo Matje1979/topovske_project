@@ -1,6 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 from location_field.models.plain import PlainLocationField
+import datetime
 
 # Create your models here.
 
@@ -36,6 +37,7 @@ class Index(models.Model):
 
 class Project(SingletonModel):
     title = models.CharField(max_length=255)
+    title_en = models.CharField(max_length=255, null=True)
     text = RichTextField()
 
     def __str__(self):
@@ -44,15 +46,27 @@ class Project(SingletonModel):
 
 class CampHistory(SingletonModel):
     title = models.CharField(max_length=255)
+    title_en = models.CharField(max_length=255, default='')
     text = RichTextField()
+    text_en = RichTextField(default='')
 
     def __str__(self):
         return self.title
 
+class Support(SingletonModel):
+    title = models.CharField(max_length=255, default='')
+    text = RichTextField(null=True, blank=True)
+    text_en = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='static/images/', blank=True, default=None)
+
+    def __str__(self):
+        return self.title
 
 class Current(SingletonModel):
     title = models.CharField(max_length=255)
+    title_en = models.CharField(max_length=255, default='')
     text = RichTextField()
+    text_en = RichTextField(default='')
 
     def __str__(self):
         return self.title
@@ -60,7 +74,9 @@ class Current(SingletonModel):
 
 class PublicCampaign(SingletonModel):
     title = models.CharField(max_length=255)
-    text = RichTextField()
+    title_en = models.CharField(max_length=255, default='')
+    text = RichTextField(default='')
+    text_en = RichTextField(default='')
 
     def __str__(self):
         return self.title
@@ -98,7 +114,7 @@ class Archive(models.Model):
 
 class Location(models.Model):
     title = models.CharField(max_length=255)
-    description = models.TextField(blank=True)
+    description = models.TextField(blank=True, default='')
     city = models.CharField(max_length=255, default='Belgrade')
     location = PlainLocationField(based_fields=['city'], zoom=7, default='44.79688084502436,20.477120876312256')
 
@@ -127,7 +143,12 @@ class Photo(models.Model):
 
 
 class Video(models.Model):
-    pass
+    title = models.CharField(max_length=100, null=True, blank=True)
+    source=models.CharField(max_length=255, null=True, blank=True)
+    date = models.DateField(default=datetime.date.today)
+
+    def __str__(self):
+        return self.title
 
 
 class Interview(models.Model):

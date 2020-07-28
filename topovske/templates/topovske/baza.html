@@ -1,36 +1,50 @@
 {% extends 'topovske/base_template.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
     <div class="baza-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</div>
     <div class="baza-forms">
     	<form class="surname" action="/baza_podataka/" method="get">
-    		<input class="b-input" type="text" name="surname" placeholder="Prezime">
+    		<input class="b-input" type="text" name="surname" placeholder="{% trans 'Prezime' %}">
     		<button  class="m-glass" type="submit">
-    			 <img src="{% static 'topovske/images/vector9.png' %}">
+    			<i class="fas fa-search"></i>
+    			 <!-- <img src="{% static 'topovske/images/vector9.png' %}"> -->
     		</button>
     	</form>
     	<form class="nationality" action="/baza_podataka/" method="get">
-    		<input class="b-input" type="text" name="nationality" placeholder="Nacionalnost">
+    		<input class="b-input" type="text" name="nationality" placeholder="{% trans 'Nacionalnost' %}">
     		<button  class="m-glass" type="submit">
-    		    <img src="{% static 'topovske/images/vector9.png' %}">
+    			<i class="fas fa-search"></i>
+    		    <!-- <img src="{% static 'topovske/images/vector9.png' %}"> -->
     		</button>
     	</form>
     </div>
+    <div id="b-controls-top" class="b-controls">
+			<div class="arrow-box-left">
+    	        <img class="b-left" src="{% static 'topovske/images/l-arrow.png' %}">
+    	    </div>
+    	    <div class="arrow-box-right">
+    	        <img class="b-right" src="{% static 'topovske/images/r-arrow.png' %}">
+    	    </div>
+        </div>
     <div class="table-container">
+    	<div id="scroll-container">
+    		<div id="scroll-top"></div>
+    	</div>
 	    <div class="table-slider">
-_
-		    <div class="table-page">
+        {% for slide in db_slides %}
+		    <div class="table-page"> 	
 			    <table class="table">
-			    	<tr>
-			    		<th>PREZIME</th>
-			    		<th>IME</th>
-			    		<th>NACIONALNOST</th>
-			    		<th>DATUM RODJENJA</th>
-			    		<th>MESTO BORAVKA</th>
-			    		<th>IZVOR</th>
+			    	<tr class="table-header">
+			    		<th>{% trans 'PREZIME' %}</th>
+			    		<th>{% trans 'IME' %}</th>
+			    		<th>{% trans 'NACIONALNOST' %}</th>
+			    		<th>{% trans 'DATUM RODJENJA' %}</th>
+			    		<th>{% trans 'MESTO BORAVKA' %}</th>
+			    		<th>{% trans 'IZVOR' %}</th>
 			    	</tr>
-                    {% for victim in victims %}
+                    {% for victim in slide %}
 			    	<tr>
 			    		<td>{{ victim.surname }}</td>
 			    		<td>{{ victim.name }}</td>
@@ -42,11 +56,16 @@ _
                     {% endfor %}
 			    </table>
 			</div>  <!-- .table-page -->
+		 {% endfor %}
 		</div> <!-- table slider -->
-		<div class="b-controls">
-	    	<img class="b-left" src="{% static 'topovske/images/l-arrow.png' %}">
-	    	<img class="b-right" src="{% static 'topovske/images/r-arrow.png' %}">
-	    </div>
+		<div id="b-controls-bottom" class="b-controls">
+			<div class="arrow-box-left">
+    	        <img class="b-left" src="{% static 'topovske/images/l-arrow.png' %}">
+    	    </div>
+    	    <div class="arrow-box-right">
+    	        <img class="b-right" src="{% static 'topovske/images/r-arrow.png' %}">
+    	    </div>
+        </div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -59,6 +78,21 @@ _
 			dots: false,
 			prevArrow: $('.b-left'),
 			nextArrow: $('.b-right')
+    	});
+    </script>
+    <script>
+    	$(document).ready(function(){
+			$('.table-page').doubleScroll();
+		});
+    </script>
+    <script>
+    	$(function(){
+    		$('#scroll-container').scroll(function(){
+    			$('.table-page').scrollLeft($('#scroll-container').scrollLeft());
+    		});
+    		$('.table-page').scroll(function(){
+    			$('#scroll-container').scrollLeft($('.table-page').scrollLeft());
+    		});
     	});
     </script>
 {% endblock content %}

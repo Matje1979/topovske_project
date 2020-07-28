@@ -1,11 +1,11 @@
 {% extends 'topovske/base_template.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block content %}
     <div class="index-bg-photos">
 	    <img class="index-photo1" src="{% static 'topovske/images/topovske-img.png' %}">
-	    <img class="index-photo2" src="#">
-	    <img class="index-photo3" src="#">
+	    <img class="index-photo2" src="{% static 'topovske/images/Topovske-2407.png' %}">
+	    <img class="index-photo3" src="{% static 'topovske/images/Topovske-2456.png' %}">
 	</div>
 	<div class="index-link">
 		<p>JOIN THE CAMPAIGN</p>
@@ -28,15 +28,20 @@
 	<div class="c-right3">
 		<img src="{% static 'topovske/images/i-control-right.png' %}">
 	</div>
-	<div class="index-project-title">Topovske šupe</div>
-	<div class="index-project-subtitle">Mapiranje Holokausta - Logor Topovkse šupe</div>
-    {% for idx_item in indexes %}
-    <div class="index-project-number{{ forloop.counter }}">{{ idx_item.title | safe }}</div>
-    {% endfor %}
-    {% for idx_item in indexes %}
-	<div class="index-project-text{{ forloop.counter }}">{{ idx_item.text | safe }}
-	</div>
-    {% endfor %}
+    <div id="title">
+    	<div class="index-project-title">Topovske šupe</div>
+    	<div class="index-project-subtitle">Mapiranje Holokausta - Logor Topovkse šupe</div>
+    </div>
+    
+    <div class="index-project-number1">1.</div>
+	<div class="index-project-text1">uyvbuvugvugvugv</div>
+
+    <div class="index-project-number2">2.</div>
+    <div class="index-project-text2">uyvbu</div>
+
+    <div class="index-project-number3">3.</div>
+    <div class="index-project-text3">uyvbuvugvugvugvuyvbuvugvugvugv</div>
+    
 
 	<a href="https://www.facebook.com/cpi.cpi.90226/about?section=contact-info&lst=586286136%3A100026784489324%3A1583921432">
 	    <img id="fb-img" src="{% static 'topovske/images/fb-img.png' %}">
@@ -48,9 +53,9 @@
 	    <img id="youtube-img" src="{% static 'topovske/images/youtube.png' %}">
     </a>
     <a href="http://test.cpi.rs">
-	    <div id="pratite_nas">PRATITE NAS</div>
-	</a>
-
+	    <div id="pratite_nas">{% trans 'PRATITE NAS' %}</div>
+    	</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $('.c-right1').click(function() {
             $('.c-right1').css('display', "none");

@@ -1,7 +1,10 @@
 {% extends 'topovske/base_template.html' %}
 {% load static %}
 
+{% load i18n %}
+
 {% block content %}
+    {% if 'en' not in request.path %}
     <div class="o_logoru_container" >
         <div class="inside-box1">
 			<div class="inner-0">
@@ -9,17 +12,142 @@
 					<img src="{% static 'topovske/images/blue_bar.png' %}">
 				</div>
 				<div class="i-right">
-				    {{ projects.title }}
+				    <p>{{ projects.title }}</p>
 				</div>
 			</div>
+            <div class="inner-1">
+                <div class="i-left">
+                    <img src="{% static 'topovske/images/blue_bar.png' %}">
+                </div>
+                <div class="i-right">
+                    <p>{% trans 'PODRŽITE KAMPANJU' %}</p>
+                </div>
+            </div>
         </div>
         <div class="inside_box2_istorija" style="margin-bottom: 30px;">
             <div class="logo-big">
-                <img src="{% static 'topovske/images/topovske_big_logo.png' %}">
+                <img class="logo-img" src="{% static 'topovske/images/topovske_big_logo.png' %}">
             </div>
             <div class="text">
                 {{ projects.text | safe }}
             </div>
 		</div>
+        <div class="inside_box3_istorija" style="margin-bottom: 30px;">
+            <div class="logo-big">
+                <img class="logo-img" src="{% static 'topovske/images/topovske_big_logo.png' %}">
+            </div>
+            <div class="text">
+                {{ support.text| safe }}
+            </div>
+        </div>
+        <div class="inside-box1">
+            <div class="inner-x">
+                <div class="i-left">
+                    <img src="{% static 'topovske/images/blue_bar.png' %}">
+                </div>
+                <div class="i-right">
+                    <p>{{ projects.title }}</p>
+                </div>
+            </div>
+            <div class="inner-y">
+                <div class="i-left">
+                    <img src="{% static 'topovske/images/blue_bar.png' %}">
+                </div>
+                <div class="i-right">
+                    <p>{% trans 'PODRŽITE KAMPANJU' %}</p>
+                </div>
+            </div>
+        </div>    
     </div>
+    {% else %}
+        <div class="o_logoru_container" >
+        <div class="inside-box1">
+            <div class="inner-0">
+                <div class="i-left">
+                    <img src="{% static 'topovske/images/blue_bar.png' %}">
+                </div>
+                <div class="i-right">
+                    <p>{{ projects.title_en }}</p>
+                </div>
+            </div>
+            <div class="inner-1">
+                <div class="i-left">
+                    <img src="{% static 'topovske/images/blue_bar.png' %}">
+                </div>
+                <div class="i-right">
+                    <p>{% trans 'PODRŽITE KAMPANJU' %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="inside_box2_istorija" style="margin-bottom: 30px;">
+            <div class="logo-big">
+                <img class="logo-img" src="{% static 'topovske/images/topovske_big_logo.png' %}">
+            </div>
+            <div class="text">
+                {{ projects.text | safe }}
+            </div>
+        </div>
+        <div class="inside_box3_istorija" style="margin-bottom: 30px;">
+            <div class="logo-big">
+                <img class="logo-img" src="{% static 'topovske/images/topovske_big_logo.png' %}">
+            </div>
+            <div class="text">
+                {{ support.text| safe }}
+            </div>
+        </div>
+        <div class="inside-box1">
+            <div class="inner-x">
+                <div class="i-left">
+                    <img src="{% static 'topovske/images/blue_bar.png' %}">
+                </div>
+                <div class="i-right">
+                    <p>{{ projects.title_en }}</p>
+                </div>
+            </div>
+            <div class="inner-y">
+                <div class="i-left">
+                    <img src="{% static 'topovske/images/blue_bar.png' %}">
+                </div>
+                <div class="i-right">
+                    <p>{% trans 'PODRŽITE KAMPANJU' %}</p>
+                </div>
+            </div>
+        </div>    
+    </div>
+    {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('.inner-y .i-right').click(function(){
+            $('.inside-box1 .inner-y').css('display', 'none');
+            $('.inside-box1 .inner-x').css('display', 'block');
+            $('.inside-box1 .inner-0').css('display', 'none');
+            $('.inside-box1 .inner-1').css('display', 'block');
+            $('.inside_box2_istorija').css('display', 'none');
+            $('.inside_box3_istorija').css('display', 'block');
+        })
+        $('.inner-x .i-right').click(function(){
+            $('.inside-box1 .inner-y').css('display', 'block');
+            $('.inside-box1 .inner-x').css('display', 'none');
+            $('.inside-box1 .inner-0').css('display', 'block');
+            $('.inside-box1 .inner-1').css('display', 'none');
+            $('.inside_box2_istorija').css('display', 'block');
+            $('.inside_box3_istorija').css('display', 'none');
+        })
+           $('.inner-0 .i-right').click(function(){
+            $('.inside-box1 .inner-1 .i-left').css('visibility', 'hidden');
+            $('.inside-box1 .inner-0 .i-left').css('visibility', 'visible');
+            $('.inside-box1 .inner-0 .i-right').css('color', '#324E6B');
+            $('.inside-box1 .inner-1 .i-right').css('color', '#9BA7B1');
+            $('.inside_box2_istorija').css('display', 'block');
+            $('.inside_box3_istorija').css('display', 'none');
+        })
+        $('.inner-1 .i-right').click(function(){
+            $('.inside-box1 .inner-1 .i-left').css('visibility', 'visible');
+            $('.inside-box1 .inner-0 .i-right').css('color','#9BA7B1');
+            $('.inside-box1 .inner-0 .i-left').css('visibility', 'hidden');
+            $('.inside-box1 .inner-1 .i-right').css('color', '#324E6B');
+            $('.inside_box2_istorija').css('display', 'none');
+            $('.inside_box3_istorija').css('display', 'block');
+        })
+    </script>
 {% endblock content %}

@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-27 13:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: topovske/templates/topovske/arhiva.html:13
+#: topovske/templates/topovske/arhiva.html:65
+#: topovske/templates/topovske/arhiva.html:73
+#: topovske/templates/topovske/dokumenti.html:13
+#: topovske/templates/topovske/fotografije.html:13
+#: topovske/templates/topovske/spisak.html:13
+#: topovske/templates/topovske/svedocenja.html:13
+msgid "PISMA"
+msgstr "LETTERS"
+
+#: topovske/templates/topovske/arhiva.html:23
+#: topovske/templates/topovske/dokumenti.html:23
+#: topovske/templates/topovske/fotografije.html:23
+#: topovske/templates/topovske/spisak.html:23
+#: topovske/templates/topovske/spisak.html:65
+#: topovske/templates/topovske/svedocenja.html:23
+msgid "SPISAK ŽRTAVA"
+msgstr "VICTIMS LIST"
+
+#: topovske/templates/topovske/arhiva.html:33
+#: topovske/templates/topovske/dokumenti.html:33
+#: topovske/templates/topovske/fotografije.html:33
+#: topovske/templates/topovske/spisak.html:33
+#: topovske/templates/topovske/svedocenja.html:33
+#: topovske/templates/topovske/svedocenja.html:65
+msgid "SVEDOČENJA"
+msgstr "TESTIMONIES"
+
+#: topovske/templates/topovske/arhiva.html:43
+#: topovske/templates/topovske/dokumenti.html:43
+#: topovske/templates/topovske/dokumenti.html:65
+#: topovske/templates/topovske/dokumenti.html:73
+#: topovske/templates/topovske/fotografije.html:43
+#: topovske/templates/topovske/spisak.html:43
+#: topovske/templates/topovske/svedocenja.html:43
+msgid "DOKUMENTI"
+msgstr "DOCUMENTS"
+
+#: topovske/templates/topovske/arhiva.html:53
+#: topovske/templates/topovske/base_template.html:54
+#: topovske/templates/topovske/base_template.html:150
+#: topovske/templates/topovske/base_template.html:219
+#: topovske/templates/topovske/dokumenti.html:53
+#: topovske/templates/topovske/fotografije.html:53
+#: topovske/templates/topovske/fotografije.html:65
+#: topovske/templates/topovske/fotografije.html:73
+#: topovske/templates/topovske/spisak.html:53
+#: topovske/templates/topovske/svedocenja.html:53
+msgid "FOTOGRAFIJE"
+msgstr "PHOTOS"
+
+#: topovske/templates/topovske/arhiva.html:95
+#: topovske/templates/topovske/dokumenti.html:95
+#: topovske/templates/topovske/foto.html:26
+#: topovske/templates/topovske/fotografije.html:95
+#: topovske/templates/topovske/spisak.html:95
+#: topovske/templates/topovske/svedocenja.html:95
+#: topovske/templates/topovske/video.html:19
+msgid "Prikaži još"
+msgstr "LOAD MORE"
+
+#: topovske/templates/topovske/base_template.html:34
+#: topovske/templates/topovske/base_template.html:110
+#: topovske/templates/topovske/base_template.html:215
+msgid "O PROJEKTU"
+msgstr "ABOUT"
+
+#: topovske/templates/topovske/base_template.html:38
+#: topovske/templates/topovske/base_template.html:118
+#: topovske/templates/topovske/base_template.html:216
+msgid "O LOGORU"
+msgstr "THE CAMP"
+
+#: topovske/templates/topovske/base_template.html:42
+#: topovske/templates/topovske/base_template.html:126
+#: topovske/templates/topovske/base_template.html:217
+msgid "ARHIVA"
+msgstr "ARCHIVE"
+
+#: topovske/templates/topovske/base_template.html:46
+#: topovske/templates/topovske/base_template.html:134
+#: topovske/templates/topovske/base_template.html:218
+msgid "MAPA"
+msgstr "MAP"
+
+#: topovske/templates/topovske/base_template.html:50
+#: topovske/templates/topovske/base_template.html:142
+msgid "BAZA PODATAKA"
+msgstr "DATABASE"
+
+#: topovske/templates/topovske/base_template.html:58
+#: topovske/templates/topovske/base_template.html:158
+#: topovske/templates/topovske/base_template.html:220
+msgid "VIDEO"
+msgstr "VIDEOS"
+
+#: topovske/templates/topovske/base_template.html:62
+#: topovske/templates/topovske/base_template.html:166
+#: topovske/templates/topovske/base_template.html:221
+msgid "INTERVJU"
+msgstr "INTERVIEWS"
+
+#: topovske/templates/topovske/baza.html:9
+msgid "Prezime"
+msgstr "Surname"
+
+#: topovske/templates/topovske/baza.html:16
+msgid "Nacionalnost"
+msgstr "Nationality"
+
+#: topovske/templates/topovske/baza.html:29
+msgid "PREZIME"
+msgstr "SURNAME"
+
+#: topovske/templates/topovske/baza.html:30
+msgid "IME"
+msgstr "NAME"
+
+#: topovske/templates/topovske/baza.html:31
+msgid "NACIONALNOST"
+msgstr "NATIONALITY"
+
+#: topovske/templates/topovske/baza.html:32
+msgid "DATUM RODJENJA"
+msgstr "DATE OF BIRTH"
+
+#: topovske/templates/topovske/baza.html:33
+msgid "MESTO BORAVKA"
+msgstr "PLACE OF RESIDENCY"
+
+#: topovske/templates/topovske/baza.html:34
+msgid "IZVOR"
+msgstr "SOURCE"
+
+#: topovske/templates/topovske/index.html:50
+msgid "PRATITE NAS"
+msgstr "FOLLOW US"
+
+#: topovske/templates/topovske/interviews.html:6
+msgid "Stranica u izradi"
+msgstr "Page in construction"
+
+#: topovske/templates/topovske/o_projektu.html:23
+#: topovske/templates/topovske/o_projektu.html:57
+#: topovske/templates/topovske/o_projektu.html:78
+#: topovske/templates/topovske/o_projektu.html:112
+msgid "PODRŽITE KAMPANJU"
+msgstr "SUPPORT THE CAMPAIGN"
+
+#: topovske_project/settings.py:126
+msgid "Serbian"
+msgstr ""
+
+#: topovske_project/settings.py:127
+msgid "English"
+msgstr ""

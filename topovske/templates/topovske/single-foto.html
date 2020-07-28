@@ -1,0 +1,30 @@
+{% extends 'topovske/base_template.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+	<div class="galerija-container">
+		<div class="galerija-slajder">
+			<!-- {% for slide in p_slides %} -->
+			<div class="foto_galerija">
+               <!--  {% for image in slide %} -->
+                    <div  class="image-box">
+                       <!--  <a href=""> -->
+                        	<img src="{{ image.file.url }}"/>
+                            
+                        <!-- </a> -->
+                        <!-- <p>{{ image.name }}</p> -->
+
+                    </div>
+                <!-- {% endfor %} -->
+	            <!-- <div  class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div> -->
+	            <br style="clear: both;">
+	            <!-- <div id="body-cover">
+		            <div id="close-cover"><i class="far fa-window-close"></i></div>
+		        </div> -->
+			</div>
+			<!-- {% endfor %} -->
+	    </div>
+	</div>
+{% endblock content %}

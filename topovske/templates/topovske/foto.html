@@ -1,33 +1,63 @@
 {% extends 'topovske/base_template.html' %}
 {% load static %}
-{% load staticfiles %}
-
+{% load i18n %}
 {% block content %}
 	<div class="galerija-container">
 		<div class="galerija-slajder">
+			{% for slide in p_slides %}
 			<div class="foto_galerija">
-                {% for image in page_obj %}
+                {% for image in slide %}
                     <div  class="image-box">
-                        <a href=""><img src="{{ image.file.url }}"/></a>
+                        <a href="{{ image.file.url }}">
+                        	<img src="{{ image.file.url }}"/>
+                            
+                        </a>
+                        <p>{{ image.name }}</p>
+
                     </div>
                 {% endfor %}
-{#	            <div  class="image-box">#}
-{#	            	<a href=""><img src="#"></a>#}
-{#	            </div>#}
+	            <!-- <div  class="image-box">
+	            	<a href=""><img src="#"></a>
+	            </div> -->
 	            <br style="clear: both;">
+	            <div id="body-cover">
+		            <div id="close-cover"><i class="far fa-window-close"></i></div>
+		        </div>
 			</div>
+			{% endfor %}
 	    </div>
+	    <div id="load-more"><p>{% trans 'Prikaži još' %}</p></div>
 	    <div class="controls">
 			<div class="prev">
-				<img src="{% static 'topovske/images/blue_arrow_reverse.png' %}">
+				<i class="fas fa-arrow-left"></i>
+				<!-- <img src="{% static 'topovske/images/blue_arrow_reverse.png' %}"> -->
 			</div>
 			<div class="next">
-				<img src="{% static 'topovske/images/blue_arrow.png' %}">
+				<i class="fas fa-arrow-right"></i>
+				<!-- <img src="{% static 'topovske/images/blue_arrow.png' %}"> -->
 			</div>
-		</div>
+
+	    </div>
 	</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+    	$('.galerija-slajder').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: true,
+			infinite: false,
+			prevArrow: $('.prev'),
+			nextArrow: $('.next'), 
+			responsive: [
+			    {
+					breakpoint: 720,
+					settings: "unslick"
+			    }
+			]
+    	});
+    </script>
     <script>
 		$(document).ready(function(){
 			$('.magnifying-glass').hover(function(){
@@ -82,15 +112,26 @@
 		});
     </script>
     <script>
-    	$('.container-projekti-mobile .Page_slide').slice(0,1).show();
+    	$('.galerija-container .galerija-slajder .foto_galerija').slice(0,1).show();
+    	 if($('.galerija-container .galerija-slajder .foto_galerija:hidden').length === 0) {
+                $('#load-more').css('display', 'none');
+            }
     	$('#load-more').on('click', function() {
-            $('.container-projekti-mobile .Page_slide:hidden').slice(0,1).slideDown();
-            if($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
+            $('.galerija-container .galerija-slajder .foto_galerija:hidden').slice(0,1).slideDown();
+            if($('.galerija-container .galerija-slajder .foto_galerija:hidden').length === 0) {
                 $('#load-more').fadeOut();
             }
         });
     </script>
     <script>
+    	$('.galerija-slajder .foto_galerija .image-box').on('click', function(){
+    		$(this).attr('id', 'poster');
+    		
+    		$('#body-cover').css({'display':'block', "background-color": "black", "z-index":"10"});
+    		$(this).removeClass('.galerija-slajder .foto_galerija .image-box');
+    	})
+    </script>
+   <!--  <script>
     	$('.galerija-slajder').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -99,5 +140,5 @@
 			prevArrow: $('.prev'),
 			nextArrow: $('.next')
     	});
-    </script>
+    </script> -->
 {% endblock content %}

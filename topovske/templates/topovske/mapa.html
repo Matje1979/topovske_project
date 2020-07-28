@@ -19,7 +19,7 @@
     <script>
         L.marker([{{ loc.location }}]).addTo(map)
             .bindPopup('{{ loc.description }}')
-            .openPopup();
+            // .openPopup();
     </script>
     {% endfor %}
 {% endblock content %}

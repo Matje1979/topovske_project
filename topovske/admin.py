@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Index, Project, Current, PublicCampaign, CampHistory, Camp, Archive, Victim, Photo, Interview, Location
+from .models import Index, Project, Current, PublicCampaign, CampHistory, Camp, Archive, Victim, Photo, Interview, Location, Video, Support
 
 admin.site.register(Index)
 admin.site.register(Project)
@@ -15,3 +15,5 @@ admin.site.register(Location)
 admin.site.register(Victim)
 admin.site.register(Photo)
 admin.site.register(Interview)
+admin.site.register(Video)
+admin.site.register(Support)

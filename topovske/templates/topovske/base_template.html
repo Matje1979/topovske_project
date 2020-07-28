@@ -1,5 +1,4 @@
 {% load i18n %}
-{% load staticfiles %}
 {% load static %}
 
 
@@ -15,24 +14,14 @@
        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
        crossorigin=""/>
 	<link rel="stylesheet" href="{% static 'topovske/css/stylesheet.css' %}">
+	<script src="https://kit.fontawesome.com/b2bccd6173.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
        crossorigin=""></script>
 	<title>Topovske šupe</title>
 </head>
 <body>
-    <div class="menu-dropdown" style="background-color: #324E6B;">
-		<div class="menu-close-box"><img src="{% static 'topovske/images/X.png' %}"></div>
-		<p class="menu-title">MENI</p>
-		<ul class="menu-dropdown-list">
-			<li class="list-item"><a href="{% url 'topovske-projekat' %}">{% trans 'O PROJEKTU' %}</a></li>
-			<li class="list-item"><a href="{% url 'topovske-o-logoru' %}">{% trans 'O LOGORU' %}</a></li>
-			<li class="list-item" id="i-ture"><a href="{% url 'topovske-arhiva' %}">{% trans 'ARHIVA' %}</a></li>
-			<li class="list-item"><a href="{% url 'topovske-mapa' %}">{% trans 'MAPA' %}</a></li>
-			<li class="list-item" id="i-ture"><a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a></li>
-			<li class="list-item"><a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a></li>
-		</ul>
-	</div>
+   
 	{% if location == "naslovna" %}
 		<nav class="nav-index" style="width: 100%;">
 			<a href="{% url 'topovske-naslovna' %}">
@@ -41,77 +30,67 @@
 		        </div>
 	        </a>
 		    <ul class="nav-links">
-		      <li class="o_nama" style="width: auto;">
+		      <li id="naslovna-o-projektu" class="o_nama" style="width: auto;">
 		        <a href="{% url 'topovske-projekat' %}">{% trans 'O PROJEKTU' %}</a>
-		        {% if 'projekat' in request.path %}
-		            <p class="onam1"></p>
-		        {% else %}
-		            <p class="onam2"></p>
-		        {% endif %}
+		        <p class="p1"></p>
+		        </li>
+		      <li id="naslovna-o-logoru" class="nav-projekti" style="width: auto;">
+		           <a href="{% url 'topovske-o-logoru' %}">{% trans 'O LOGORU' %}</a>
+		           <p class="pro_1"></p>
 		      </li>
-		      <li class="nav-projekti" style="width: auto;">
-		        <a href="{% url 'topovske-o-logoru' %}">{% trans 'O LOGORU' %}</a>
-		        {% if 'o_logoru' in request.path %}
-		            <p class="pro1"></p>
-		        {% else %}
-		            <p class="pro2"></p>
-		        {% endif %}
-		      </li>
-		      <li class="h_tours" style="width: auto;">
+		      <li id="naslovna-arhiva" class="h_tours" style="width: auto;">
 		        <a href="{% url 'topovske-arhiva' %}">{% trans 'ARHIVA' %}</a>
-		        {% if 'arhiva' in request.path %}
-		            <p class="ist1"></p>
-		        {% else %}
-		            <p class="ist2"></p>
-		        {% endif %}
+		            <p class="ist_1"></p>
 		      </li>
-		      <li class="publications" style="width: auto">
+		      <li id="naslovna-mapa" class="publications" style="width: auto">
 		        <a href="{% url 'topovske-mapa' %}" >{% trans 'MAPA' %}</a>
-		        {% if 'mapa' in request.path %}
-		            <p class="pub1"></p>
-		        {% else %}
-		            <p class="pub2"></p>
-		        {% endif %}
+		            <p class="pub_1"></p>
 		      </li>
-		       <li class="o_nama" style="width:auto;">
+		       <li id="naslovna-baza" class="o_nama" style="width:auto;">
 		        <a href="{% url 'topovske-baza-podataka' %}">{% trans 'BAZA PODATAKA' %}</a>
-		        {% if 'baza_podataka' in request.path %}
-		            <p class="onam1"></p>
-		        {% else %}
-		            <p class="onam2"></p>
-		        {% endif %}
+		            <p class="baz_1"></p>
 		      </li>
-		      <li class="o_nama" style="width:auto;">
-		        <a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a>
-		        {% if 'foto' in request.path %}
-		            <p class="onam1"></p>
-		        {% else %}
-		            <p class="onam2"></p>
-		        {% endif %}
+		      <li id="naslovna-foto" class="o_nama" style="width:auto;">
+		          <a href="{% url 'topovske-foto' %}">{% trans 'FOTOGRAFIJE' %}</a>
+		          <p class="foto_1"></p>
 		      </li>
-		      <li class="o_nama" style="width:auto;">
-		        <a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a>
-		        {% if 'video' in request.path %}
-		            <p class="onam1"></p>
-		        {% else %}
-		            <p class="onam2"></p>
-		        {% endif %}
+		      <li id="naslovna-video" class="o_nama" style="width:auto;">
+		          <a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a>
+		            <p class="vid_1"></p>  
 		      </li>
-{#		      <li id="langs">#}
-{#		        <span id="langs-img"><img src="{% static 'topovske/images/vektor.png' %}"></span><span><a href="#">ENG</a></span><span><a href="#">SRB</a></span>#}
-{#		      </li>#}
-                <div class="nav-langs" style="margin-left: 80px;">
-                    <form action="{% url 'set_language' %}" method="post">
-                        {% csrf_token %}
-                        <div class="light"><button type="submit">SRB</button></div>
-                        <input type="hidden" name="language" value="sr">
-                    </form>
-                    <form action="{% url 'set_language' %}" method="post">
-                        {% csrf_token %}
-                        <div class="li-regular"><button type="submit">ENG</button></div>
-                        <input type="hidden" name="language" value="en">
-                    </form>
-                </div>
+		      <li id="naslovna-intervju" class="o_nama" style="width:auto;">
+		          <a href="{% url 'topovske-foto' %}">{% trans 'INTERVJU' %}</a>  
+		          <p class="int_1"></p>
+		      </li>
+		      <li id="langs">
+              {% if 'en' not in request.path %}
+	                <div class="nav-langs" style="margin-left: 80px;">
+	                    <form action="{% url 'set_language' %}" method="post">
+	                        {% csrf_token %}
+	                        <div class="light" style="margin-right:5px;"><button id="btn-left-disabled" type="submit">SRB</button></div>
+	                        <input type="hidden" name="language" value="sr">
+	                    </form>
+	                    <form action="{% url 'set_language' %}" method="post">
+	                        {% csrf_token %}
+	                        <div class="li-regular"><button id="btn-right" type="submit">ENG</button></div>
+	                        <input type="hidden" name="language" value="en">
+	                    </form>
+	                </div>
+              {% else %}
+	                <div class="nav-langs" style="margin-left: 80px;">
+	                    <form action="{% url 'set_language' %}" method="post">
+	                        {% csrf_token %}
+	                        <div class="light" style="margin-right:5px;"><button id="btn-left" type="submit">SRB</button></div>
+	                        <input type="hidden" name="language" value="sr">
+	                    </form>
+	                    <form action="{% url 'set_language' %}" method="post">
+	                        {% csrf_token %}
+	                        <div class="li-regular"><button id="btn-right-disabled" type="submit">ENG</button></div>
+	                        <input type="hidden" name="language" value="en">
+	                    </form>
+	                </div>
+               {% endif %}
+               </li>
 		    </ul>
 		    <div class="burger" id="burger-alt" style="margin-top: 20px;">
 		      <div class="line1"></div>
@@ -162,43 +141,63 @@
 		       <li class="o_nama" style="width:auto;">
 		        <a href="{% url 'topovske-baza-podataka' %}">{% trans 'BAZA PODATAKA' %}</a>
 		        {% if 'baza_podataka' in request.path %}
-		            <p class="onam1"></p>
+		            <p class="baz1"></p>
 		        {% else %}
-		            <p class="onam2"></p>
+		            <p class="baz2"></p>
 		        {% endif %}
 		      </li>
 		      <li class="o_nama" style="width:auto;">
-		        <a href="{% url 'topovske-foto' %}">{% trans 'FOTO' %}</a>
+		        <a href="{% url 'topovske-foto' %}">{% trans 'FOTOGRAFIJE' %}</a>
 		        {% if 'foto' in request.path %}
-		            <p class="onam1"></p>
+		            <p class="foto1"></p>
 		        {% else %}
-		            <p class="onam2"></p>
+		            <p class="foto2"></p>
 		        {% endif %}
 		      </li>
 		      <li class="o_nama" style="width:auto;">
 		        <a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a>
 		        {% if 'video' in request.path %}
-		            <p class="onam1"></p>
+		            <p class="vid1"></p>
 		        {% else %}
-		            <p class="onam2"></p>
+		            <p class="vid2"></p>
 		        {% endif %}
 		      </li>
-              <li>
-                  <span id="langs-img"><img src="{% static 'topovske/images/vektor.png' %}"></span>
-              </li>
+		      <li class="o_nama inter_vju" style="width:auto;">
+		        <a href="{% url 'topovske-intervju' %}">{% trans 'INTERVJU' %}</a>
+		        {% if 'intervju' in request.path %}
+		            <p class="interv"></p>
+		        {% else %}
+		            <p class="interv2"></p>
+		        {% endif %}
+		      </li>
 		      <li id="langs">
+		      	{% if 'en' not in request.path %}
                 <div class="nav-langs" style="margin-left: 80px;">
                     <form action="{% url 'set_language' %}" method="post">
                         {% csrf_token %}
-                        <div class="light"><button type="submit">SRB</button></div>
+                        <div class="light" style="margin-right:8px;"><button id="btn-left-disabled" type="submit">SRB</button></div>
                         <input type="hidden" name="language" value="sr">
                     </form>
                     <form action="{% url 'set_language' %}" method="post">
                         {% csrf_token %}
-                        <div class="li-regular"><button type="submit">ENG</button></div>
+                        <div class="li-regular"><button id="btn-right" type="submit">ENG</button></div>
                         <input type="hidden" name="language" value="en">
                     </form>
                 </div>
+                {% else %}
+                <div class="nav-langs" style="margin-left: 80px;">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="light" style="margin-right:8px;"><button id="btn-left" type="submit">SRB</button></div>
+                        <input type="hidden" name="language" value="sr">
+                    </form>
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="li-regular"><button id="btn-right-disabled" type="submit">ENG</button></div>
+                        <input type="hidden" name="language" value="en">
+                    </form>
+                </div>
+                {% endif %}
 		      </li>
 		    </ul>
 
@@ -209,7 +208,79 @@
 		    </div>
 	    </nav>
 	{% endif %}
+	<div class="menu-dropdown" style="background-color: #324E6B;">
+		<div class="menu-close-box"><img src="{% static 'topovske/images/X.png' %}"></div>
+		<p class="menu-title">MENI</p>
+		<ul class="menu-dropdown-list">
+			<li class="list-item"><a href="{% url 'topovske-projekat' %}">{% trans 'O PROJEKTU' %}</a></li>
+			<li class="list-item"><a href="{% url 'topovske-o-logoru' %}">{% trans 'O LOGORU' %}</a></li>
+			<li class="list-item" id="i-ture"><a href="{% url 'topovske-arhiva' %}">{% trans 'ARHIVA' %}</a></li>
+			<li class="list-item"><a href="{% url 'topovske-mapa' %}">{% trans 'MAPA' %}</a></li>
+			<li class="list-item"><a href="{% url 'topovske-baza-podataka' %}">{% trans 'BAZA PODATAKA' %}</a></li>
+			<li class="list-item" id="i-ture"><a href="{% url 'topovske-foto' %}">{% trans 'FOTOGRAFIJE' %}</a></li>
+			<li class="list-item"><a href="{% url 'topovske-video' %}">{% trans 'VIDEO' %}</a></li>
+			<li class="list-item" id="i-ture"><a href="{% url 'topovske-intervju' %}">{% trans 'INTERVJU' %}</a></li>
+			<!-- <li id="langs" class="list-item">
+		        <span><a href="#">ENG</a></span><span><a href="#">SRB</a></span>#}
+		    </li> -->
+		    {% if 'en' not in request.path %}
+			<li id="langs" class="list-item">
+                <div class="nav-langs" style="margin-left: 80px;">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="light"><button id="btn-left-disabled" type="submit">SRB</button></div>
+                        <input type="hidden" name="language" value="sr">
+                    </form>
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="li-regular"><button id="btn-right" type="submit">ENG</button></div>
+                        <input type="hidden" name="language" value="en">
+                    </form>
+                </div>
+		    </li>
+		    {% else %}
+		    <li id="langs" class="list-item">
+                <div class="nav-langs" style="margin-left: 80px;">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="light"><button id="btn-left" type="submit">SRB</button></div>
+                        <input type="hidden" name="language" value="sr">
+                    </form>
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="li-regular"><button id="btn-right-disabled" type="submit">ENG</button></div>
+                        <input type="hidden" name="language" value="en">
+                    </form>
+                </div>
+		    </li>
+		    {% endif %}
+		</ul>
+	</div>
+	<div class="main">
     {% block content %}
     {% endblock content %}
+    </div>
+    <div class="bottom"></div>
+    <div id="body-cover">
+    	<div id="close-cover"><i class="far fa-window-close"></i></div>
+    </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+		$(document).ready(function(){
+			$('.menu-close-box').click(function() {
+			    $('.menu-dropdown').css('transform', "translateX(100%)");
+			    $('.leaflet-touch .leaflet-bar').css('display', 'block');
+			});	
+		});
+    </script>
+
+    <script>
+		$(document).ready(function(){
+			$('.burger').click(function() {
+			    $('.menu-dropdown').css('transform', "translateX(0%)");
+			    $('.leaflet-touch .leaflet-bar').css('display', 'none');
+			});	
+		});
+    </script>
 </body>
 </html>

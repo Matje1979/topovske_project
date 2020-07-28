@@ -1,55 +1,30 @@
 {% extends 'topovske/base_template.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block content %}
 	<div class="galerija-container">
 		<div class="galerija-slajder">
+			{% for slide in vid_slides%}
 			<div class="foto_galerija">
+				{% for video in slide %}
 	            <div  class="image-box">
-	            	<a href="#"><video controls><source src="#" type="video/mp4"></video></a>
+	            	<a href="#"><iframe id="vid" src="{{ video.source }}" allowfullscreen></iframe></a>
+	            	<p>{{ video.title }}</p>
 	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
-	            <div class="image-box">
-	            	<a href=""><img src="#"></a>
-	            </div>
+	            {% endfor %}
 	            <br style="clear: both;">
 			</div>
+			{% endfor %}
 	    </div>
+	    <div id="load-more"><p>{% trans 'Prikaži još' %}</p></div>
 	    <div class="controls">
 			<div class="prev">
-				<img src="{% static 'topovske/images/blue_arrow_reverse.png' %}">
+				<i class="fas fa-arrow-left"></i>
+				<!-- <img src="{% static 'topovske/images/blue_arrow_reverse.png' %}"> -->
 			</div>
 			<div class="next">
-				<img src="{% static 'topovske/images/blue_arrow.png' %}">
+				<i class="fas fa-arrow-right"></i>
+				<!-- <img src="{% static 'topovske/images/blue_arrow.png' %}"> -->
 			</div>
 		</div>
 	</div>
@@ -109,10 +84,13 @@
 		});
     </script>
     <script>
-    	$('.container-projekti-mobile .Page_slide').slice(0,1).show();
+    	$('.galerija-container .galerija-slajder .foto_galerija').slice(0,1).show();
+    	 if($('.galerija-container .galerija-slajder .foto_galerija:hidden').length === 0) {
+                $('#load-more').css('display', 'none');
+            }
     	$('#load-more').on('click', function() {
-            $('.container-projekti-mobile .Page_slide:hidden').slice(0,1).slideDown();
-            if($('.container-projekti-mobile .Page_slide:hidden').length === 0) {
+            $('.galerija-container .galerija-slajder .foto_galerija:hidden').slice(0,1).slideDown();
+            if($('.galerija-container .galerija-slajder .foto_galerija:hidden').length === 0) {
                 $('#load-more').fadeOut();
             }
         });
@@ -124,7 +102,12 @@
 			arrows: true,
 			dots: true,
 			prevArrow: $('.prev'),
-			nextArrow: $('.next')
+			nextArrow: $('.next'),
+			responsive: [{
+				breakpoint: 720,
+				settings: "unslick"
+			}
+			]
     	});
     </script>
 {% endblock content %}
